@@ -1,0 +1,18 @@
+.Footer{
+  border-top: 1px solid var(--white);
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 50px;
+  margin-bottom:40px ;
+}
+.social-media{
+  display: flex;
+}
+
+.social-media__link{
+  width: 100px;
+  height: 100px;
+  background-color: var(--white);
+  margin: 10px 15px;
+  border-radius: 20px;
+}

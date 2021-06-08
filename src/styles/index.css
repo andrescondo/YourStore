@@ -1,0 +1,37 @@
+:root{
+  --black:#000;
+  /* --blackSemiLight:#4C4E4E; */
+  --white:rgb(250, 245, 245);
+  /* paleta azul */
+  /* --blue: #1814FA; */
+  --blueSemiBlack:#0C0A7A;
+  --blueBlack:#15202B;
+  --blueLight: #1A91DA;
+  --blueSemiLight:#8394A1;
+  /* --gradient : linear-gradient(var(--header-gradient)) */
+  --font-primeary:'Montserrat', sans-serif;
+  --font-secundary:'Rubik', sans-serif;
+}
+
+::selection{
+  background-color: var(--blueBlack);
+  color: var(--white);
+}
+
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--blueBlack);
+  color: var(--white);
+  font-family: var(--font-secundary);
+  font-size:16px;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  color: var(--white);
+  text-decoration: none;
+}
