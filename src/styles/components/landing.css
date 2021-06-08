@@ -1,4 +1,28 @@
 .Landing{
   width: 100%;
+  height: 100vh;
 }
 
+.hero{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 40vh;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  /* background: rgb(222,220,220);
+  background: linear-gradient(267deg, rgba(222,220,220,1) 23%, rgba(255,255,255,0) 100%); */
+}
+
+.hero h2{
+  display: flex;
+  font-size: 38px;
+  margin: 0px;
+  margin-bottom: 10px;
+}
+.hero p{
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0px;
+}
