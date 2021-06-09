@@ -1,4 +1,6 @@
 import React from 'react';
+// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import '../styles/components/Login.css';
 
@@ -7,7 +9,7 @@ const Login = () => {
     <div className="login">
       <div className="login-box" data-title="Aún en desarrollo">
         <h3>Iniciar Sesión </h3>
-        <form action="login" method="post" target="_blank">
+        <form method="post" target="_blank">
           <p>
             <label htmlFor="email">Correo</label>
           </p>
@@ -39,7 +41,8 @@ const Login = () => {
           <a href="/">
             <p>Olvide mi contraseña</p>
           </a>
-          <input type="submit" value="Ingresar" />
+          {/* <input type="submit" value="Ingresar" /> */}
+          <Link to="/home">Ingresar</Link>
         </form>
       </div>
     </div>
