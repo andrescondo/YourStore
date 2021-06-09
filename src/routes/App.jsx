@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Layout from '../components/Layout';
-import Landing from '../containers/Landing';
-import Login from '../containers/Login';
-import SignUp from '../containers/SignUp';
+import Layout from '../components/Layout';//contenedor del Header y Footer
+import Landing from '../containers/Landing';//pantalla principal
+import Login from '../containers/Login';//pantalla del iniciar sesión
+import SignUp from '../containers/SignUp';//pantalla del registro
 
 const App = () => {
   return (

@@ -12,7 +12,7 @@ const Landing = () => {
         </h2>
         <p>
           Almacena tus productos de manera completamente online. <br />
-          Registarte, y accede a tener tu propio inventariado.
+          Registarte, y accede para tener tu propio inventariado.
         </p>
       </div>
     </div>
