@@ -36,3 +36,59 @@ a{
   color: var(--white);
   text-decoration: none;
 }
+
+::-webkit-scrollbar{
+  width: 14px;
+  background-color: var(--blueSemiLight);
+}
+::-webkit-scrollbar-track{
+  border-radius: 3px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+  width: 12px;
+  border-radius: 20px;
+  background-color: var(--green);
+  /* border: 2px solid var(--blueBlack); */
+}
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"]{
+  /* background-color: var(--white-rgba); */
+  /* color:var(--white); */
+  width: 400px;
+  height: 30px;
+  border-radius: 10px;
+  padding: 5px 8px;
+  outline: none;
+  border: none;
+  
+}
+
+input[type="submit"]{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 35px;
+  margin: auto;
+  padding: 5px 8px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background-color: var(--green);
+  color: var(--blueBlack);
+  font-weight: 700;
+}
+
+input[type="submit"]:hover{
+  background-color: var(--green) ;
+  color: var(--black);
+  border: 2px solid var(--blueBlack);
+
+
+}
+
+

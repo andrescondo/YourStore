@@ -1,0 +1,36 @@
+.login{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 90px; */
+}
+
+.login-box{
+  padding:60px 35px;
+  font-size: 18px;
+  border: 4px solid var(--blueSemiLight);
+  border-radius: 20px;
+  color: var(--blueBlack);
+  background-color: var(--blueSemiLight);
+}
+
+.login-box h3{
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+}
+.login-box p{
+  font-weight: 700;
+}
+.login-box a p{
+  display: flex;
+}
+
+.login-box a:hover{
+
+  text-decoration: underline;
+  color:var(--blueBlack);
+}
