@@ -12,9 +12,11 @@ const Header = () => {
       <div className="Header-nav">
         <nav className="Header-nav__help">
           <li>
+            {/* Redirecion a pantalla de iniciar sesion */}
             <Link to="/login">Login</Link>
           </li>
           <li>
+            {/* Redirecion a pantalla de registrarse */}
             <Link to="signup">Sign Up</Link>
           </li>
         </nav>

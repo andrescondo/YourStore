@@ -5,7 +5,7 @@ import '../styles/components/SignUp.css';
 const SignUp = () => {
   return (
     <div className="signup">
-      <did className="signup-box" data-title="Aún en desarrollo">
+      <div className="signup-box" data-title="Aún en desarrollo">
         <h3>Crear Cuenta</h3>
         <form action="signup" method="post">
           <p>
@@ -91,7 +91,7 @@ const SignUp = () => {
           </a>
           <input type="submit" value="Crear Cuenta" />
         </form>
-      </did>
+      </div>
     </div>
   );
 };
