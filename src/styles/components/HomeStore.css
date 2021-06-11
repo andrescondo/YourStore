@@ -1,0 +1,42 @@
+.createStore{
+  display: grid;
+  grid-template-columns: repeat(3, .33fr);
+  grid-template-areas: "boxStore boxStore boxStore";
+}
+
+.boxStore{
+  grid: boxStore;
+  padding: 18px 18px;
+  background-color: var(--white-rgba);
+  border: 3px solid var(--green);
+  border-radius: 10px;
+  margin: 25px;
+  position: relative;
+}
+
+.boxStore-icon{
+  position: absolute; 
+  top: 10px;
+  right: 10px;
+  background-color: var(--green);
+  border-radius: 50%;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.boxStore-icon i{
+  font-size: 15px;
+  color: var(--blueBlack);
+
+}
+
+
+.boxStore-info p {
+  font-weight: 700;
+}
+.boxStore-info span{
+  font-weight: 500;
+}
+
