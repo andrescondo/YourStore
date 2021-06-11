@@ -18,6 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "json":"json-server --watch db.json",
     "format": "prettier --write {*.js,src/**/*.{js,jsx}}",
     "save": "npm run format && git add ./ ",
     "github":" git pull origin master && git push origin master"

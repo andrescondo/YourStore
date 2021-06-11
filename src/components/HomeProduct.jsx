@@ -15,7 +15,7 @@ const HomeProduct = () => {
         <input type="button" value="Crear Producto" onClick={Press} />
       </div>
       <div className="boxCreate">
-        <div className="boxProduct">
+        <div className="boxProduct" id="hola">
           <figure>
             <div className="boxProduct-icon">
               <i className="fas fa-plus"></i>
