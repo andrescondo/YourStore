@@ -22,6 +22,34 @@ const HomeProduct = () => {
           <p>Nombre</p>
           <p>Código</p>
         </div>
+        <div className="boxProduct">
+          <figure>
+            <img src={imageDefault} alt="imagen por defecto" />
+          </figure>
+          <p>Nombre</p>
+          <p>Código</p>
+        </div>
+        <div className="boxProduct">
+          <figure>
+            <img src={imageDefault} alt="imagen por defecto" />
+          </figure>
+          <p>Nombre</p>
+          <p>Código</p>
+        </div>
+        <div className="boxProduct">
+          <figure>
+            <img src={imageDefault} alt="imagen por defecto" />
+          </figure>
+          <p>Nombre</p>
+          <p>Código</p>
+        </div>
+        <div className="boxProduct">
+          <figure>
+            <img src={imageDefault} alt="imagen por defecto" />
+          </figure>
+          <p>Nombre</p>
+          <p>Código</p>
+        </div>
       </div>
     </div>
   );
