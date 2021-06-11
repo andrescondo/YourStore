@@ -19,36 +19,14 @@ const HomeProduct = () => {
           <figure>
             <img src={imageDefault} alt="imagen por defecto" />
           </figure>
-          <p>Nombre</p>
-          <p>Código</p>
-        </div>
-        <div className="boxProduct">
-          <figure>
-            <img src={imageDefault} alt="imagen por defecto" />
-          </figure>
-          <p>Nombre</p>
-          <p>Código</p>
-        </div>
-        <div className="boxProduct">
-          <figure>
-            <img src={imageDefault} alt="imagen por defecto" />
-          </figure>
-          <p>Nombre</p>
-          <p>Código</p>
-        </div>
-        <div className="boxProduct">
-          <figure>
-            <img src={imageDefault} alt="imagen por defecto" />
-          </figure>
-          <p>Nombre</p>
-          <p>Código</p>
-        </div>
-        <div className="boxProduct">
-          <figure>
-            <img src={imageDefault} alt="imagen por defecto" />
-          </figure>
-          <p>Nombre</p>
-          <p>Código</p>
+          <div className="boxProduct-info">
+            <p>Nombre</p>
+            <p>Código</p>
+          </div>
+          <div className="boxProduct-icons">
+            <i class="fas fa-edit"></i>
+            <i class="fas fa-trash"></i>
+          </div>
         </div>
       </div>
     </div>
