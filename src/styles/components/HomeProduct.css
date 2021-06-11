@@ -34,7 +34,7 @@
   flex-direction: column;
   background-color: rgba(225, 225, 225, .4);
   border: 3px solid var(--green);
-  padding: 20px 20px 30px 20px;
+  padding: 20px 20px 20px 20px;
   margin: 25px;
   min-height: 200px;
   border-radius: 10px;
@@ -62,6 +62,12 @@
 .boxProduct-info{
   margin: 15px 0px;
 }
+.boxProduct-info p {
+  font-weight: 700;
+}
+.boxProduct-info span{
+  font-weight: 500;
+}
 
 .boxProduct-icons{
   display: flex;
@@ -69,7 +75,11 @@
 }
 
 .boxProduct-icons i{
+  display: flex;
   background-color: var(--green);
   padding: 10px;
   border-radius: 50%;
+  color: var(--blueBlack);
+  justify-content: center;
+  align-items: center;
 }

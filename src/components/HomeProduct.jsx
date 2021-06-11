@@ -20,12 +20,16 @@ const HomeProduct = () => {
             <img src={imageDefault} alt="imagen por defecto" />
           </figure>
           <div className="boxProduct-info">
-            <p>Nombre</p>
-            <p>Código</p>
+            <p>
+              Nombre: <span>Coca cola FDFSDF</span>
+            </p>
+            <p>
+              Código: <span>SAD3FS3</span>
+            </p>
           </div>
           <div className="boxProduct-icons">
-            <i class="fas fa-edit"></i>
-            <i class="fas fa-trash"></i>
+            <i className="fas fa-edit"></i>
+            <i className="fas fa-trash"></i>
           </div>
         </div>
       </div>
