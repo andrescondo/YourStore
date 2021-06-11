@@ -1,0 +1,46 @@
+.create{ 
+  display: flex;
+  width: 100%;
+  justify-content:flex-end;
+
+}
+.create input{
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background-color: var(--green);
+  font-size: 18px;
+  color: var(--blueBlack);
+  font-family: var(--font-secundary);
+  font-weight: 700;
+}
+
+.boxCreate{
+  padding: 10px;
+  width: 100%;
+}
+.boxProduct{
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(225, 225, 225, .4);
+  border: 3px solid var(--green);
+  padding: 16px 10px;
+
+  border-radius: 10px;
+}
+
+.boxProduct p{
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+.boxProduct figure{
+  margin: 0px;
+  margin-bottom: 5px;
+  border-bottom: 3px solid var(--green);
+}
+
+.boxProduct figure img{
+  width: 100%;
+}

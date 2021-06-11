@@ -39,7 +39,7 @@ a{
 
 ::-webkit-scrollbar{
   width: 14px;
-  background-color: var(--blueSemiLight);
+  /* background-color: var(--blueSemiLight); */
 }
 ::-webkit-scrollbar-track{
   border-radius: 3px;
