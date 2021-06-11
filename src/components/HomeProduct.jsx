@@ -17,6 +17,9 @@ const HomeProduct = () => {
       <div className="boxCreate">
         <div className="boxProduct">
           <figure>
+            <div className="boxProduct-icon">
+              <i className="fas fa-plus"></i>
+            </div>
             <img src={imageDefault} alt="imagen por defecto" />
           </figure>
           <div className="boxProduct-info">

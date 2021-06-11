@@ -48,10 +48,29 @@
 .boxProduct figure{
   margin: 0px;
   display: flex;
-  /* margin-bottom: 10px; */
   border-bottom: 3px solid var(--green);
-  /* margin: auto; */
   justify-content: center;
+  position: relative;
+}
+
+.boxProduct-icon{
+  position: absolute; 
+  top: 10px;
+  right: 10px;
+  background-color: var(--green);
+  border-radius: 50%;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+}
+
+.boxProduct-icon i{
+  width: 15px;
+  height: 15px;
+  color: var(--blueBlack);
 }
 
 .boxProduct figure img{
@@ -75,6 +94,8 @@
 }
 
 .boxProduct-icons i{
+  width: 15px;
+  height: 15px;
   display: flex;
   background-color: var(--green);
   padding: 10px;
@@ -82,4 +103,5 @@
   color: var(--blueBlack);
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
