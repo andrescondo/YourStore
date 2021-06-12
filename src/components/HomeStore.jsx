@@ -15,7 +15,7 @@ const HomeStore = () => {
       <div className="createStore">
         <div className="boxStore">
           <div className="boxStore-icon">
-            <i className="fas fa-plus"></i>
+            <i className="fas fa-eye"></i>
           </div>
           <div className="boxStore-info">
             <p>
