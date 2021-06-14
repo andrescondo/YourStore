@@ -1,7 +1,7 @@
 import React from 'react';
 import { useModal } from '../hooks/useModal';
 import Modals from './Modals';
-import HomeProductsFrom from './HomeFrom';
+import HomeFrom from './HomeFrom';
 
 import imageDefault from '../img/default.png';
 
@@ -37,7 +37,11 @@ const BoxProduct = () => {
       <div className="boxProduct-icons">
         <i className="fas fa-edit" onClick={openModalEdit}></i>
         <Modals isOpen={isOpenEdit} closeModal={closeModalEdit}>
-          <HomeProductsFrom title="Editar Producto"></HomeProductsFrom>
+          <HomeFrom
+            title="Editar Producto"
+            name="Ingrese nombre del producto"
+            code="Ingrese código del producto"
+          ></HomeFrom>
         </Modals>
         <i className="fas fa-trash" onClick={openModalDel}></i>
         <Modals isOpen={isOpenDel} closeModal={closeModalDel}>
