@@ -7,18 +7,22 @@ import Modals from './Modals';
 
 import BoxProduct from './BoxProduct';
 // import { helpHttp } from "../helpers/helpHttp";
+import { useModal } from '../hooks/useModal';
 
 //Desde aqui llamar la API
 const HomeProduct = () => {
+  // const [] = useState(false)
+  const [isOpen, openModal, closeModal] = useModal(false);
+
   return (
     <div className="HomeProduct">
       <div className="create">
-        <input type="button" value="Crear Producto" />
+        <input type="button" value="Crear Producto" onClick={openModal} />
       </div>
       <div className="boxCreate">
         <BoxProduct />
       </div>
-      <Modals />
+      <Modals isOpen={isOpen} closeModal={closeModal} />
     </div>
   );
 };
