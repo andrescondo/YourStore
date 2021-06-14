@@ -1,17 +1,15 @@
 import React from 'react';
-// import { useState, useEffect } from 'react';
 
 import '../styles/components/HomeProduct.css';
 
 import Modals from './Modals';
 import BoxProduct from './BoxProduct';
-import HomeProductsFrom from './HomeProductsFrom';
+import HomeFrom from './HomeFrom';
 // import { helpHttp } from "../helpers/helpHttp";
 import { useModal } from '../hooks/useModal';
 
 //Desde aqui llamar la API
 const HomeProduct = () => {
-  // const [] = useState(false)
   const [isOpen, openModal, closeModal] = useModal(false);
 
   return (
@@ -23,7 +21,7 @@ const HomeProduct = () => {
         <BoxProduct />
       </div>
       <Modals isOpen={isOpen} closeModal={closeModal}>
-        <HomeProductsFrom title="Crear producto"></HomeProductsFrom>
+        <HomeFrom title="Crear producto"></HomeFrom>
       </Modals>
     </div>
   );

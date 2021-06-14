@@ -3,16 +3,20 @@ import React from 'react';
 import '../styles/components/HomeStore.css';
 
 import BoxStore from './BoxStore';
-
-function Press() {
-  alert('Hola');
-}
+import Modals from './Modals';
+import HomeFrom from './HomeFrom';
+import { useModal } from '../hooks/useModal';
 
 const HomeStore = () => {
+  const [isOpen, openModal, closeModal] = useModal(false);
+
   return (
     <div className="HomeStore">
       <div className="create">
-        <input type="button" value="Crear Bodega" onClick={Press} />
+        <input type="button" value="Crear Bodega" onClick={openModal} />
+        <Modals isOpen={isOpen} closeModal={closeModal}>
+          <HomeFrom title="Crear Bodega"></HomeFrom>
+        </Modals>
       </div>
       <div className="createStore">
         <BoxStore />

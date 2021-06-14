@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/components/HomeProductsFrom.css';
+import '../styles/components/HomeFrom.css';
 
 const HomeProductsFrom = ({ title }) => {
   return (

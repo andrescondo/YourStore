@@ -1,7 +1,7 @@
 import React from 'react';
 import { useModal } from '../hooks/useModal';
 import Modals from './Modals';
-import HomeProductsFrom from './HomeProductsFrom';
+import HomeProductsFrom from './HomeFrom';
 
 import imageDefault from '../img/default.png';
 
