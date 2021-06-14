@@ -37,9 +37,7 @@ const SignUp = () => {
             />
           </p>
           <p>
-            <label htmlFor="password-two">
-              Ingrese una Contraseña Nuevamente
-            </label>
+            <label htmlFor="password-two">Ingrese Contraseña Nuevamente</label>
           </p>
           <p>
             <input
@@ -86,9 +84,7 @@ const SignUp = () => {
               térmimos y condiciones
             </label>
           </p>
-          <a href="/">
-            <p>Olvide mi contraseña</p>
-          </a>
+
           <input type="submit" value="Crear Cuenta" />
         </form>
       </div>

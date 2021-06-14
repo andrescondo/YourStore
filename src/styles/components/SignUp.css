@@ -11,11 +11,28 @@
   border: 1px solid var(--black);
   border-radius: 20px;
   background-color: var(--blueSemiLight);
-  color: var(--blueBlack);
+  /* color: var(--blueBlack); */
+  color: var(--white);
   font-weight: 700;
 }
 .signup-box h3{
   display: flex;
   justify-content: center;
+  font-size: 23px;
+  color: var(--black);
 }
 
+label select{
+  margin-top: 10px;
+  padding: 6px 12px;
+  border-radius: 10px;
+  border: none;
+}
+
+label select option{
+  padding: 8px 0px;
+}
+ p label{
+   font-size: 18px;
+   color: var(--blueBlack);
+ }
