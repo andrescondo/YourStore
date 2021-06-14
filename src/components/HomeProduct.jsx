@@ -4,8 +4,8 @@ import React from 'react';
 import '../styles/components/HomeProduct.css';
 
 import Modals from './Modals';
-
 import BoxProduct from './BoxProduct';
+import HomeProductsFrom from './HomeProductsFrom';
 // import { helpHttp } from "../helpers/helpHttp";
 import { useModal } from '../hooks/useModal';
 
@@ -23,10 +23,7 @@ const HomeProduct = () => {
         <BoxProduct />
       </div>
       <Modals isOpen={isOpen} closeModal={closeModal}>
-        <div className="createProductos">
-          <h3>Ingresa los datos</h3>
-          <input type="text" placeholder="Nombre del producto" />
-        </div>
+        <HomeProductsFrom></HomeProductsFrom>
       </Modals>
     </div>
   );

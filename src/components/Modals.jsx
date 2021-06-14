@@ -7,7 +7,7 @@ import Modal from './Modal';
 const Modals = ({ children, isOpen, closeModal }) => {
   return (
     <Modal isOpen={isOpen} closeModal={closeModal}>
-      {children}
+      <div className="modal-box">{children}</div>
     </Modal>
   );
 };
