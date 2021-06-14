@@ -23,7 +23,7 @@ const HomeProduct = () => {
         <BoxProduct />
       </div>
       <Modals isOpen={isOpen} closeModal={closeModal}>
-        <HomeProductsFrom></HomeProductsFrom>
+        <HomeProductsFrom title="Crear producto"></HomeProductsFrom>
       </Modals>
     </div>
   );
