@@ -10,9 +10,13 @@ const Modal = ({ children, isOpen, closeModal }) => {
           X
         </button>
         {children}
-        <button className="modal-cancel" onClick={closeModal}>
-          Cancelar
-        </button>
+
+        <div className="modal-button">
+          <button className="modal-save">Guardar</button>
+          <button className=" modal-cancel" onClick={closeModal}>
+            Cancelar
+          </button>
+        </div>
       </div>
     </article>
   );
