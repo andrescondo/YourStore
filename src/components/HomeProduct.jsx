@@ -22,7 +22,12 @@ const HomeProduct = () => {
       <div className="boxCreate">
         <BoxProduct />
       </div>
-      <Modals isOpen={isOpen} closeModal={closeModal} />
+      <Modals isOpen={isOpen} closeModal={closeModal}>
+        <div className="createProductos">
+          <h3>Ingresa los datos</h3>
+          <input type="text" placeholder="Nombre del producto" />
+        </div>
+      </Modals>
     </div>
   );
 };
