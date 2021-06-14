@@ -10,6 +10,9 @@ const Modal = ({ children, isOpen, closeModal }) => {
           X
         </button>
         {children}
+        <button className="modal-cancel" onClick={closeModal}>
+          Cancelar
+        </button>
       </div>
     </article>
   );
