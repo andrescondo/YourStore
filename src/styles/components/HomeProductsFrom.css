@@ -1,0 +1,9 @@
+.HomeProduct-form input{
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--blueBlack);
+}
+
+label p{
+  margin-bottom: 10px;
+}
