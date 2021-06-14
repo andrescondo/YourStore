@@ -21,7 +21,11 @@ const HomeProduct = () => {
         <BoxProduct />
       </div>
       <Modals isOpen={isOpen} closeModal={closeModal}>
-        <HomeFrom title="Crear producto"></HomeFrom>
+        <HomeFrom
+          title="Crear producto"
+          name="Ingrese nombre del producto"
+          code="Ingrese código del producto"
+        ></HomeFrom>
       </Modals>
     </div>
   );

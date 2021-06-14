@@ -15,7 +15,11 @@ const HomeStore = () => {
       <div className="create">
         <input type="button" value="Crear Bodega" onClick={openModal} />
         <Modals isOpen={isOpen} closeModal={closeModal}>
-          <HomeFrom title="Crear Bodega"></HomeFrom>
+          <HomeFrom
+            title="Crear Bodega"
+            name="Ingrese nombre de la bodega"
+            code="Ingrese código de la bodega"
+          ></HomeFrom>
         </Modals>
       </div>
       <div className="createStore">

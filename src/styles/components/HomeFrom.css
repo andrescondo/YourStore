@@ -1,15 +1,20 @@
+.HomeProduct-form h3{
+  font-size: 24px;
+}
+
 .HomeProduct-form input{
   border-radius: 10px;
   margin-bottom: 10px;
   border: 1px solid var(--blueBlack);
   background: var(--white);
-  font-size: 18px;
+  font-size: 16px;
 }
 .HomeProduct-form input:hover{
   background-color: var(--white);
-  border: 2px solid var(--blueBlack);
+  border: 1px solid var(--blueBlack);
 }
 
 label p{
   margin-bottom: 10px;
+  font-size: 19px;
 }

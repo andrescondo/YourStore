@@ -2,17 +2,17 @@ import React from 'react';
 
 import '../styles/components/HomeFrom.css';
 
-const HomeProductsFrom = ({ title }) => {
+const HomeProductsFrom = ({ title, name, code }) => {
   return (
     <div className="HomeProduct-form">
       <h3>{title}</h3>
       <label htmlFor="name">
-        <p>Nombre del producto</p>
-        <input type="text" placeholder="Nombre del producto" />
+        <p>{name}</p>
+        <input type="text" placeholder={name} />
       </label>
       <label htmlFor="code">
-        <p>Ingrese codigo del producto</p>
-        <input type="text" placeholder="Ingrese codigo del producto" />
+        <p>{code}</p>
+        <input type="text" placeholder={code} />
       </label>
     </div>
   );
