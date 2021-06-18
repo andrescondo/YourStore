@@ -36,7 +36,16 @@ const HomeProduct = () => {
       <div className="create">
         <input type="button" value="Crear Producto" onClick={openModal} />
       </div>
-      <div className="boxCreate">{/* <BoxProduct /> */}</div>
+      <div className="boxCreate">
+        {/* <BoxProduct /> llamamiento de datos de manera directa */}
+        {
+          db.length === 0 ? (
+            <p>No hay datos</p>
+          ) : (
+            <BoxProduct />
+          ) /*llamamiento de datos de manera dinamica*/
+        }
+      </div>
       <Modals isOpen={isOpen} closeModal={closeModal}>
         <HomeFrom
           title="Crear producto"
