@@ -18,3 +18,15 @@ label p{
   margin-bottom: 10px;
   font-size: 19px;
 }
+
+.HomeProduct-form button{
+  position: absolute;
+  bottom: 15px;
+  left: 30px;
+  color:var(--white);
+  background: var(--green);
+  border: none;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-weight: 700;
+}

@@ -3,7 +3,7 @@ import React from 'react';
 import '../styles/components/HomeFrom.css';
 import '../styles/components/Modals.css';
 
-import ModalButtons from './ModalButtons';
+import ModalButton from './ModalButton';
 
 const HomeFrom = ({ title, name, code }) => {
   return (
@@ -18,8 +18,7 @@ const HomeFrom = ({ title, name, code }) => {
           <p>{code}</p>
           <input type="text" placeholder={code} />
         </label>
-
-        <ModalButtons />
+        <ModalButton />
       </form>
     </div>
   );
