@@ -9,6 +9,8 @@ const Footer = () => {
         Sitio desarrollado por: Andres Condo - Redes sociales: @andreescondo
       </p>
     </div>
+    //SPA SINGLE PAGE APP
+    //PWA PROGREESIVE WEB APP
   );
 };
 

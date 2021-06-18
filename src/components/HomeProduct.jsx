@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import '../styles/components/HomeProduct.css';
 
@@ -8,18 +8,35 @@ import HomeFrom from './HomeFrom';
 // import { helpHttp } from "../helpers/helpHttp";
 import { useModal } from '../hooks/useModal';
 
-//Desde aqui llamar la API
+const intitialDbProduct = [
+  {
+    id: 1,
+    name: 'Coca cola',
+    code: 'ADSFSD',
+  },
+  {
+    id: 2,
+    name: 'Big cola',
+    code: 'DSFNDG',
+  },
+  {
+    id: 3,
+    name: 'KFC',
+    code: 'DGDFGD',
+  },
+];
+
 const HomeProduct = () => {
   const [isOpen, openModal, closeModal] = useModal(false);
+
+  const [db, setDb] = useState(intitialDbProduct);
 
   return (
     <div className="HomeProduct">
       <div className="create">
         <input type="button" value="Crear Producto" onClick={openModal} />
       </div>
-      <div className="boxCreate">
-        <BoxProduct />
-      </div>
+      <div className="boxCreate">{/* <BoxProduct /> */}</div>
       <Modals isOpen={isOpen} closeModal={closeModal}>
         <HomeFrom
           title="Crear producto"
