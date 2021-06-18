@@ -5,11 +5,11 @@ import HomeFrom from './HomeFrom';
 
 import imageDefault from '../img/default.png';
 
-const BoxProduct = () => {
+const BoxProduct = ({ data }) => {
   const [isOpenPlus, openModalPlus, closeModalPlus] = useModal(false);
   const [isOpenDel, openModalDel, closeModalDel] = useModal(false);
   const [isOpenEdit, openModalEdit, closeModalEdit] = useModal(false);
-
+  // const [ name , code ] = data;
   return (
     <div className="boxProduct">
       <figure>
@@ -28,10 +28,10 @@ const BoxProduct = () => {
       </figure>
       <div className="boxProduct-info">
         <p>
-          Nombre: <span>Coca cola FDFSDF</span>
+          Nombre: <span>{data.name}</span>
         </p>
         <p>
-          Código: <span>SAD3FS3</span>
+          Código: <span>{data.code}</span>
         </p>
       </div>
       <div className="boxProduct-icons">

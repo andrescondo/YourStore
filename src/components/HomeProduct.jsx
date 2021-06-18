@@ -42,7 +42,7 @@ const HomeProduct = () => {
           db.length === 0 ? (
             <p>No hay datos</p>
           ) : (
-            <BoxProduct />
+            db.map((data) => <BoxProduct data={data} key={data.id} />)
           ) /*llamamiento de datos de manera dinamica*/
         }
       </div>
