@@ -13,15 +13,6 @@ const Modal = ({ children, isOpen, closeModal }) => {
         </div>
 
         {children}
-
-        <div className="modal-bottom">
-          <div className="modal-bottom__box">
-            <button className="modal-save">Si, aceptar</button>
-            <button className=" modal-cancel" onClick={closeModal}>
-              Cancelar
-            </button>
-          </div>
-        </div>
       </div>
     </article>
   );
