@@ -10,9 +10,23 @@ const initialForm = {
   id: null,
 };
 
-const HomeFrom = ({ title, name, code }) => {
+const HomeFrom = ({
+  title,
+  name,
+  code,
+  createData,
+  updateData,
+  deleteData,
+  dataToEdit,
+  setDataToEdit,
+}) => {
   const [form, setForm] = useState(initialForm);
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    // setForm({
+    //   ...form,
+    //   [e.target.name]: e.target.value,
+    // });
+  };
 
   const handleSubmit = (e) => {};
 
@@ -26,7 +40,7 @@ const HomeFrom = ({ title, name, code }) => {
             type="text"
             placeholder={name}
             onChange={handleChange}
-            value={form.name}
+            // value={form.name} aun en desarrollo
           />
         </label>
         <label htmlFor="code">
@@ -35,7 +49,7 @@ const HomeFrom = ({ title, name, code }) => {
             type="text"
             placeholder={code}
             onChange={handleChange}
-            value={form.code}
+            // value={form.code} aun en desarrollo
           />
         </label>
         <ModalButton />

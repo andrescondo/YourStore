@@ -30,6 +30,13 @@ const HomeProduct = () => {
   const [isOpen, openModal, closeModal] = useModal(false);
 
   const [db, setDb] = useState(intitialDbProduct);
+  const [dataToEdit, setDataToEdit] = useState(null);
+
+  const createData = (data) => {};
+
+  const updateData = (data) => {};
+
+  const deleteData = (id) => {};
 
   return (
     <div className="HomeProduct">
@@ -42,7 +49,17 @@ const HomeProduct = () => {
           db.length === 0 ? (
             <p>No hay datos</p>
           ) : (
-            db.map((data) => <BoxProduct data={data} key={data.id} />)
+            db.map((data) => (
+              <BoxProduct
+                data={data}
+                key={data.id}
+                createData={createData}
+                updateData={updateData}
+                deleteData={deleteData}
+                dataToEdit={dataToEdit}
+                setDataToEdit={setDataToEdit}
+              />
+            ))
           ) /*llamamiento de datos de manera dinamica*/
         }
       </div>
@@ -51,6 +68,10 @@ const HomeProduct = () => {
           title="Crear producto"
           name="Ingrese nombre del producto"
           code="Ingrese código del producto"
+          createData={createData}
+          updateData={updateData}
+          dataToEdit={dataToEdit}
+          setDataToEdit={setDataToEdit}
         ></HomeFrom>
       </Modals>
     </div>

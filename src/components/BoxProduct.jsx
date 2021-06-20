@@ -9,7 +9,7 @@ const BoxProduct = ({ data }) => {
   const [isOpenPlus, openModalPlus, closeModalPlus] = useModal(false);
   const [isOpenDel, openModalDel, closeModalDel] = useModal(false);
   const [isOpenEdit, openModalEdit, closeModalEdit] = useModal(false);
-  // const [ name , code ] = data;
+
   return (
     <div className="boxProduct">
       <figure>
@@ -34,6 +34,7 @@ const BoxProduct = ({ data }) => {
           Código: <span>{data.code}</span>
         </p>
       </div>
+
       <div className="boxProduct-icons">
         <i className="fas fa-edit" onClick={openModalEdit}></i>
         <Modals isOpen={isOpenEdit} closeModal={closeModalEdit}>
@@ -43,6 +44,7 @@ const BoxProduct = ({ data }) => {
             code="Ingrese código del producto"
           ></HomeFrom>
         </Modals>
+
         <i className="fas fa-trash" onClick={openModalDel}></i>
         <Modals isOpen={isOpenDel} closeModal={closeModalDel}>
           <p>¿Desea eliminar el Producto?</p>
