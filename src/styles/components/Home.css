@@ -20,11 +20,16 @@
 .Home-nav li{
   padding: 12px 20px;
   font-size: 18px;
+  cursor:pointer;
 }
-.Home-nav li a:hover{
+.Home-nav li p{
+  margin: 0;
+}
+.Home-nav li p:hover{
   color: var(--green);
-  padding-bottom: 8px;
-  border-bottom: 5px solid var(--green);
+  /* padding-bottom: 8px; */
+  /* border-bottom: 5px solid var(--green); */
+ 
 }
 .Home-box{
   width: 100%;

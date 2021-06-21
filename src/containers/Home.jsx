@@ -1,5 +1,4 @@
-import React from 'react';
-import { Link, Switch, useRouteMatch, Route } from 'react-router-dom';
+import React, { useState } from 'react';
 
 import '../styles/components/Home.css';
 
@@ -7,7 +6,16 @@ import HomeProduct from '../components/HomeProduct';
 import HomeStore from '../components/HomeStore';
 
 const Home = () => {
-  let { path, url } = useRouteMatch();
+  let [view, setView] = useState('product');
+
+  const click = (e) => {
+    if (e.target.id === 'product') {
+      console.log(e.target.id);
+      setView(e.target.id);
+    } else if (e.target.id === 'store') {
+      setView(e.target.id);
+    }
+  };
 
   return (
     <div className="Home">
@@ -16,21 +24,22 @@ const Home = () => {
       <div className="Home-container">
         <nav className="Home-nav">
           <li>
-            <Link to={`${url}/product`}>Producto</Link>
+            <p id="product" onClick={click}>
+              {' '}
+              Producto{' '}
+            </p>
           </li>
           <li>
-            <Link to={`${url}/store`}>Bodega</Link>
+            <p id="store" onClick={click}>
+              Bodega
+            </p>
           </li>
         </nav>
         <div className="Home-box">
-          <Switch>
-            <Route path={`${path}/product`}>
-              <HomeProduct />
-            </Route>
-            <Route path={`${path}/store`}>
-              <HomeStore />
-            </Route>
-          </Switch>
+          {
+            view === 'product' ? <HomeProduct /> : <HomeStore />
+            //uso de if ternario para renderizado de componentes
+          }
         </div>
       </div>
     </div>

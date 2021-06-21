@@ -22,13 +22,21 @@ const HomeFrom = ({
 }) => {
   const [form, setForm] = useState(initialForm);
   const handleChange = (e) => {
-    // setForm({
-    //   ...form,
-    //   [e.target.name]: e.target.value,
-    // });
+    setForm({
+      ...form,
+      value: e.target.value,
+    });
+    console.log(form);
   };
 
-  const handleSubmit = (e) => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!form.name || !form.code) {
+      alert('Esta vacio');
+      return;
+    }
+  };
 
   return (
     <div className="HomeProduct-form">
@@ -40,7 +48,7 @@ const HomeFrom = ({
             type="text"
             placeholder={name}
             onChange={handleChange}
-            // value={form.name} aun en desarrollo
+            value={form.name} //aun en desarrollo
           />
         </label>
         <label htmlFor="code">
