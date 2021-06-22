@@ -6,7 +6,6 @@
   align-items: center;
   /* margin-top: 90px; */
 }
-
 .login-box{
   padding:60px 35px;
   font-size: 18px;
@@ -15,7 +14,6 @@
   color: var(--blueBlack);
   background-color: var(--blueSemiLight);
 }
-
 .login-box h3{
   font-size: 24px;
   font-weight: 700;
