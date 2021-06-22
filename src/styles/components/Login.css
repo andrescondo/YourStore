@@ -28,9 +28,23 @@
 .login-box a p{
   display: flex;
 }
-
+.login-box__login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 20px 0px; */
+}
 .login-box a:hover{
-
   text-decoration: underline;
   color:var(--blueBlack);
+}
+.login-box__login a{
+  background-color: var(--green);
+  padding: 8px 16px;
+  border-radius: 10px;
+  color: var(--blueBlack);
+  font-weight: 700;
+}
+.login-box__login a:hover{
+  text-decoration: none;
 }

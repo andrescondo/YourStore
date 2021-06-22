@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import '../styles/components/HomeFrom.css';
 
-import ModalButton from './ModalButton';
+// import ModalButton from './ModalButton';
 
 const initialForm = {
   name: '',
@@ -21,13 +21,14 @@ const HomeFrom = ({
   setDataToEdit,
 }) => {
   const [form, setForm] = useState(initialForm);
-  console.log(form);
+  // console.log();
 
   const handleChange = (e) => {
     setForm({
       ...form,
-      value: e.target.value,
+      [e.target]: e.target.value,
     });
+    // console.log(form.name.value)
   };
 
   const handleSubmit = (e) => {
@@ -49,7 +50,7 @@ const HomeFrom = ({
             type="text"
             placeholder={name}
             onChange={handleChange}
-            value={form.name} //aun en desarrollo
+            // value={} //aun en desarrollo
           />
         </label>
         <label htmlFor="code">
@@ -62,6 +63,7 @@ const HomeFrom = ({
           />
         </label>
         {/* <ModalButton /> */}
+        <input type="submit" value="Guardar" />
       </form>
     </div>
   );

@@ -1,8 +1,8 @@
 import React from 'react';
 import HomeFrom from '../components/HomeFrom';
 
-const NewData = ({ data }) => {
-  console.log(data);
+const NewData = ({ db }) => {
+  console.log(db);
   return (
     <div className="NewData">
       <HomeFrom

@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 import '../styles/components/HomeProduct.css';
 
-import Modals from './Modals';
+// import Modals from './Modals';
 import BoxProduct from './BoxProduct';
-import HomeFrom from './HomeFrom';
+// import HomeFrom from './HomeFrom';
 // import { helpHttp } from "../helpers/helpHttp";
 import { useModal } from '../hooks/useModal';
 
@@ -39,11 +39,22 @@ const HomeProduct = () => {
 
   const deleteData = (id) => {};
 
+  // const query = {db , createData, updateData, deleteData, dataToEdit, setDataToEdit}
+
   return (
     <div className="HomeProduct">
       <div className="create">
         {/* <input type="button" value="Crear Producto" onClick={openModal} /> */}
-        <Link to="/home/new" data={db}>
+        <Link
+          to={{
+            pathname: '/home/new',
+            state: {
+              data: { db },
+              dataToEdit: { dataToEdit },
+              createData: { createData },
+            },
+          }}
+        >
           Crear Producto
         </Link>
       </div>
@@ -67,15 +78,6 @@ const HomeProduct = () => {
           ) /*llamamiento de datos de manera dinamica*/
         }
       </div>
-      {/* <Modals isOpen={isOpen} closeModal={closeModal}>
-        <HomeFrom
-         
-          createData={createData}
-          updateData={updateData}
-          dataToEdit={dataToEdit}
-          setDataToEdit={setDataToEdit}
-        ></HomeFrom>
-      </Modals> */}
     </div>
   );
 };

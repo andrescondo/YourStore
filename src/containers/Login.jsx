@@ -42,7 +42,9 @@ const Login = () => {
             <p>Olvide mi contraseña</p>
           </a>
           {/* <input type="submit" value="Ingresar" /> */}
-          <Link to="/home">Ingresar</Link>
+          <div className="login-box__login">
+            <Link to="/home">Ingresar</Link>
+          </div>
         </form>
       </div>
     </div>
