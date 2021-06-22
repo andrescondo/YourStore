@@ -21,12 +21,13 @@ const HomeFrom = ({
   setDataToEdit,
 }) => {
   const [form, setForm] = useState(initialForm);
+  console.log(form);
+
   const handleChange = (e) => {
     setForm({
       ...form,
       value: e.target.value,
     });
-    console.log(form);
   };
 
   const handleSubmit = (e) => {
@@ -60,7 +61,7 @@ const HomeFrom = ({
             // value={form.code} aun en desarrollo
           />
         </label>
-        <ModalButton />
+        {/* <ModalButton /> */}
       </form>
     </div>
   );

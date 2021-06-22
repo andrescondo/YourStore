@@ -6,6 +6,7 @@ import Landing from '../containers/Landing'; //pantalla principal
 import Login from '../containers/Login'; //pantalla del iniciar sesión
 import SignUp from '../containers/SignUp'; //pantalla del registro
 import Home from '../containers/Home'; //pantalla de home una vez logeado
+import NewData from '../containers/NewData';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/home" component={Home} />
+          <Route exact path="/home/new" component={NewData} />
           {/* <Route ></Route> */}
         </Switch>
       </Layout>

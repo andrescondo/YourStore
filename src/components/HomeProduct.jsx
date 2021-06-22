@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import '../styles/components/HomeProduct.css';
 
@@ -42,6 +43,9 @@ const HomeProduct = () => {
     <div className="HomeProduct">
       <div className="create">
         <input type="button" value="Crear Producto" onClick={openModal} />
+        <Link to="/home/new" data={db}>
+          Crear Producto
+        </Link>
       </div>
       <div className="boxCreate">
         {/* <BoxProduct /> llamamiento de datos de manera directa */}
@@ -63,17 +67,15 @@ const HomeProduct = () => {
           ) /*llamamiento de datos de manera dinamica*/
         }
       </div>
-      <Modals isOpen={isOpen} closeModal={closeModal}>
+      {/* <Modals isOpen={isOpen} closeModal={closeModal}>
         <HomeFrom
-          title="Crear producto"
-          name="Ingrese nombre del producto"
-          code="Ingrese código del producto"
+         
           createData={createData}
           updateData={updateData}
           dataToEdit={dataToEdit}
           setDataToEdit={setDataToEdit}
         ></HomeFrom>
-      </Modals>
+      </Modals> */}
     </div>
   );
 };
