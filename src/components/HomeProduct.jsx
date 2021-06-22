@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import '../styles/components/HomeProduct.css';
 
-// import Modals from './Modals';
 import BoxProduct from './BoxProduct';
-// import HomeFrom from './HomeFrom';
+import HomeFrom from './HomeFrom';
 // import { helpHttp } from "../helpers/helpHttp";
-import { useModal } from '../hooks/useModal';
 
 const intitialDbProduct = [
   {
@@ -28,9 +26,8 @@ const intitialDbProduct = [
 ];
 
 const HomeProduct = () => {
-  const [isOpen, openModal, closeModal] = useModal(false);
-
   const [db, setDb] = useState(intitialDbProduct);
+  const [formState, setFormState] = useState(false);
   const [dataToEdit, setDataToEdit] = useState(null);
 
   const createData = (data) => {};
@@ -39,25 +36,26 @@ const HomeProduct = () => {
 
   const deleteData = (id) => {};
 
-  // const query = {db , createData, updateData, deleteData, dataToEdit, setDataToEdit}
+  const openForm = () => {
+    setFormState(!formState);
+    console.log(formState);
+  };
 
   return (
     <div className="HomeProduct">
       <div className="create">
-        {/* <input type="button" value="Crear Producto" onClick={openModal} /> */}
-        <Link
-          to={{
-            pathname: '/home/new',
-            state: {
-              data: { db },
-              dataToEdit: { dataToEdit },
-              createData: { createData },
-            },
-          }}
-        >
-          Crear Producto
-        </Link>
+        <input type="button" value="Crear Producto" onClick={openForm} />
       </div>
+      {formState ? (
+        <HomeFrom
+          title="Crear producto"
+          name="Ingrese nombre del producto"
+          code="Ingrese código del producto"
+        />
+      ) : (
+        ''
+      )}
+
       <div className="boxCreate">
         {/* <BoxProduct /> llamamiento de datos de manera directa */}
         {

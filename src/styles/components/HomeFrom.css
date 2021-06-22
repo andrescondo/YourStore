@@ -1,3 +1,12 @@
+.HomeProduct-form{
+  margin: 16px 0px;
+  padding: 10px 20px;
+  border: 2px solid var(--white-rgba);
+  border-radius: 20px;
+  /* box-shadow: 2px 2px 5px var(--white-rgba); */
+  box-shadow: 2px 2px 20px 4px var(--white-rgba);
+}
+
 .HomeProduct-form h3{
   font-size: 24px;
   margin-top: 5px;
