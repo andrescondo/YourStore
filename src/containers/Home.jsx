@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <div className="Home">
-      <h2>Hola, Patrick</h2>
+      <h2>Hola, Andres</h2>
 
       <div className="Home-container">
         <nav className="Home-nav">

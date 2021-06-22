@@ -42,7 +42,7 @@ const HomeProduct = () => {
   return (
     <div className="HomeProduct">
       <div className="create">
-        <input type="button" value="Crear Producto" onClick={openModal} />
+        {/* <input type="button" value="Crear Producto" onClick={openModal} /> */}
         <Link to="/home/new" data={db}>
           Crear Producto
         </Link>

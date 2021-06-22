@@ -4,6 +4,20 @@
   justify-content:flex-end;
 
 }
+.create a{
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background-color: var(--green);
+  font-size: 18px;
+  color: var(--blueBlack);
+  font-family: var(--font-secundary);
+  font-weight: 700;
+}
+
+.create a:hover{
+  background-color: var(--greenLight);
+}
 .create input{
   border: none;
   padding: 8px 16px;
