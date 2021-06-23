@@ -36,7 +36,10 @@ const HomeProduct = () => {
     setDb([...db, data]);
   };
 
-  const updateData = (data) => {};
+  const updateData = (data) => {
+    let newData = db.map((d) => (d.id === data.id ? data : d));
+    setDb(newData);
+  };
 
   const deleteData = (id) => {};
 
@@ -81,6 +84,7 @@ const HomeProduct = () => {
                 key={data.id}
                 setDataToEdit={setDataToEdit}
                 deleteData={deleteData}
+                openForm={openForm}
               />
             ))
           ) /*llamamiento de datos de manera dinamica*/

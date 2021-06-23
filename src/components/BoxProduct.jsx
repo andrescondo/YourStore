@@ -1,14 +1,13 @@
 import React from 'react';
 import { useModal } from '../hooks/useModal';
 import Modals from './Modals';
-import HomeFrom from './HomeFrom';
 
 import imageDefault from '../img/default.png';
 
-const BoxProduct = ({ data }) => {
+const BoxProduct = ({ data, openForm, setDataToEdit, deleteData }) => {
   const [isOpenPlus, openModalPlus, closeModalPlus] = useModal(false);
   const [isOpenDel, openModalDel, closeModalDel] = useModal(false);
-  const [isOpenEdit, openModalEdit, closeModalEdit] = useModal(false);
+  const { name, code, id } = data;
 
   return (
     <div className="boxProduct">
@@ -28,22 +27,21 @@ const BoxProduct = ({ data }) => {
       </figure>
       <div className="boxProduct-info">
         <p>
-          Nombre: <span>{data.name}</span>
+          Nombre: <span>{name}</span>
         </p>
         <p>
-          Código: <span>{data.code}</span>
+          Código: <span>{code}</span>
         </p>
       </div>
 
       <div className="boxProduct-icons">
-        <i className="fas fa-edit" onClick={openModalEdit}></i>
-        <Modals isOpen={isOpenEdit} closeModal={closeModalEdit}>
-          <HomeFrom
-            title="Editar Producto"
-            name="Ingrese nombre del producto"
-            code="Ingrese código del producto"
-          ></HomeFrom>
-        </Modals>
+        <i
+          className="fas fa-edit"
+          onClick={() => {
+            setDataToEdit(data);
+            openForm();
+          }}
+        ></i>
 
         <i className="fas fa-trash" onClick={openModalDel}></i>
         <Modals isOpen={isOpenDel} closeModal={closeModalDel}>

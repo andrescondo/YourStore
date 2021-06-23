@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import '../styles/components/HomeFrom.css';
 
@@ -21,6 +21,13 @@ const HomeFrom = ({
   openForm,
 }) => {
   const [form, setForm] = useState(initialForm);
+
+  //servira para actualizar cada que cambie el estado de dataToEdit
+  useEffect(() => {
+    dataToEdit ? setForm(dataToEdit) : setForm(initialForm);
+    //si datatoedit cambia este valor se reflejara en el formulario
+    //cuando se de actualizar
+  }, [dataToEdit]);
 
   const handleChange = (e) => {
     setForm({
