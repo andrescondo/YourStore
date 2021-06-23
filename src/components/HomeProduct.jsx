@@ -59,7 +59,6 @@ const HomeProduct = () => {
       </div>
       {formState ? (
         <HomeFrom
-          titleForm="Crear producto"
           nameForm="Ingrese nombre del producto"
           codeForm="Ingrese código del producto"
           createData={createData}

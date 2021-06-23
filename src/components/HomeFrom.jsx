@@ -11,7 +11,6 @@ const initialForm = {
 };
 
 const HomeFrom = ({
-  titleForm,
   nameForm,
   codeForm,
   createData,
@@ -44,14 +43,14 @@ const HomeFrom = ({
       return;
     }
 
-    // form.id === null ? createData(form) : updateData(form);
-    if (form.id === null) {
-      createData(form);
-      openForm();
-    } else {
-      updateData(form);
-      openForm();
-    }
+    form.id === null ? createData(form) : updateData(form);
+    // if (form.id === null) {
+    //   createData(form);
+    //   openForm();
+    // } else {
+    //   updateData(form);
+    //   openForm();
+    // }
 
     handleReset();
   };
@@ -63,7 +62,7 @@ const HomeFrom = ({
 
   return (
     <div className="HomeProduct-form">
-      <h3>{titleForm}</h3>
+      <h3>{dataToEdit ? 'Editar Producto' : 'Guardar Producto'}</h3>
 
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">
