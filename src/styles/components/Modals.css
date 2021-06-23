@@ -42,7 +42,7 @@
   position:absolute;
   /* top:1 rem; */
   right:  0rem;
-  background-color: rgb(199, 36, 36);
+  background-color: var(--red);
   font-weight: 700;
   color: var(--white);  
   border: none;
@@ -75,7 +75,7 @@
 }
 
 .modal-cancel{
-  background-color: rgb(199, 36, 36);
+  background-color: var(--red);
 }
 .modal-save{
   background-color: var(--green);

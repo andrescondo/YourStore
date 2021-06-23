@@ -10,7 +10,16 @@ const initialForm = {
   id: null,
 };
 
-const HomeFrom = ({ titleForm, nameForm, codeForm }) => {
+const HomeFrom = ({
+  titleForm,
+  nameForm,
+  codeForm,
+  createData,
+  updateData,
+  dataToEdit,
+  setDataToEdit,
+  openForm,
+}) => {
   const [form, setForm] = useState(initialForm);
   const n = nameForm,
     c = codeForm;
@@ -29,6 +38,15 @@ const HomeFrom = ({ titleForm, nameForm, codeForm }) => {
       alert('Esta vacio');
       return;
     }
+
+    form.id === null ? createData(form) : updateData(form);
+
+    handleReset();
+  };
+
+  const handleReset = (e) => {
+    setForm(initialForm);
+    setDataToEdit(null);
   };
 
   return (
@@ -58,6 +76,8 @@ const HomeFrom = ({ titleForm, nameForm, codeForm }) => {
         </label>
         <div className="Form-button">
           <input type="submit" value="Guardar" />
+          <input type="reset" value="Borrar Todo" onClick={handleReset} />
+
           {/* <input type="submit" value="Cancelar" /> */}
         </div>
       </form>

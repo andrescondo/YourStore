@@ -44,7 +44,11 @@ const HomeProduct = () => {
   return (
     <div className="HomeProduct">
       <div className="create">
-        <input type="button" value="Crear Producto" onClick={openForm} />
+        <input
+          type="button"
+          value={!formState ? 'Crear Producto' : 'Cancelar'}
+          onClick={openForm}
+        />
       </div>
       {formState ? (
         <HomeFrom
@@ -55,6 +59,7 @@ const HomeProduct = () => {
           updateData={updateData}
           dataToEdit={dataToEdit}
           setDataToEdit={setDataToEdit}
+          openForm={openForm}
         />
       ) : (
         ''
