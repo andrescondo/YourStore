@@ -38,7 +38,7 @@ const HomeProduct = () => {
 
   const openForm = () => {
     setFormState(!formState);
-    console.log(formState);
+    // console.log(formState);
   };
 
   return (
@@ -48,9 +48,13 @@ const HomeProduct = () => {
       </div>
       {formState ? (
         <HomeFrom
-          title="Crear producto"
-          name="Ingrese nombre del producto"
-          code="Ingrese código del producto"
+          titleForm="Crear producto"
+          nameForm="Ingrese nombre del producto"
+          codeForm="Ingrese código del producto"
+          createData={createData}
+          updateData={updateData}
+          dataToEdit={dataToEdit}
+          setDataToEdit={setDataToEdit}
         />
       ) : (
         ''
@@ -68,9 +72,9 @@ const HomeProduct = () => {
                 key={data.id}
                 createData={createData}
                 updateData={updateData}
+                setDataToEdit={setDataToEdit}
                 deleteData={deleteData}
                 dataToEdit={dataToEdit}
-                setDataToEdit={setDataToEdit}
               />
             ))
           ) /*llamamiento de datos de manera dinamica*/

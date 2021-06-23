@@ -43,9 +43,7 @@
   width: 100%;
   /* animation: up 3s ease-in ; */
   /* animation-delay: ; */
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
+  animation: 2s ease-in-out 0 normal forwards;
 
 
 }

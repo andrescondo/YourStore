@@ -10,31 +10,22 @@ const initialForm = {
   id: null,
 };
 
-const HomeFrom = ({
-  title,
-  name,
-  code,
-  createData,
-  updateData,
-  deleteData,
-  dataToEdit,
-  setDataToEdit,
-}) => {
+const HomeFrom = ({ titleForm, nameForm, codeForm }) => {
   const [form, setForm] = useState(initialForm);
-  // console.log();
+  const n = nameForm,
+    c = codeForm;
 
   const handleChange = (e) => {
     setForm({
       ...form,
-      [e.target]: e.target.value,
+      [e.target.name]: e.target.value,
     });
-    // console.log(form.name.value)
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!form.name || !form.code) {
+    if (!form.nameForm || !form.codeFrom) {
       alert('Esta vacio');
       return;
     }
@@ -42,24 +33,27 @@ const HomeFrom = ({
 
   return (
     <div className="HomeProduct-form">
-      <h3>{title}</h3>
+      <h3>{titleForm}</h3>
+
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">
-          <p>{name}</p>
+          <p>{n}</p>
           <input
             type="text"
-            placeholder={name}
+            name="name"
+            placeholder={n}
             onChange={handleChange}
-            // value={} //aun en desarrollo
+            value={form.name} //algo
           />
         </label>
         <label htmlFor="code">
-          <p>{code}</p>
+          <p>{c}</p>
           <input
             type="text"
-            placeholder={code}
+            name="code"
+            placeholder={c}
             onChange={handleChange}
-            // value={form.code} aun en desarrollo
+            value={form.code} //algo
           />
         </label>
         <div className="Form-button">
