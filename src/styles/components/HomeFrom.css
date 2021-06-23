@@ -1,16 +1,35 @@
 .HomeProduct-form{
+  width: 600px;
   margin: 16px 0px;
   padding: 10px 20px;
   border: 2px solid var(--white-rgba);
   border-radius: 20px;
   /* box-shadow: 2px 2px 5px var(--white-rgba); */
   box-shadow: 2px 2px 20px 4px var(--white-rgba);
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+}
+/*animacion*/
+.HomeProduct-form{
+  animation-duration: 1.2s;
+  animation-name: formAnimation;
 }
 
 .HomeProduct-form h3{
   font-size: 24px;
   margin-top: 5px;
+  display: flex;
+  justify-content: center;
 }
+
+.HomeProduct-form form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
 
 .HomeProduct-form input{
   border-radius: 10px;
@@ -39,4 +58,23 @@ label p{
   border-radius: 10px;
   padding: 8px 16px;
   font-weight: 700;
+}
+.Form-button{
+  display: flex;
+  justify-content: center;
+}
+
+.Form-button input{
+  margin: 20px 0px;
+  background-color: var(--green);
+  color: var(--blueBlack);
+}
+
+@keyframes formAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

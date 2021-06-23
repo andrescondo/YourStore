@@ -27,6 +27,7 @@
   color: var(--blueBlack);
   font-family: var(--font-secundary);
   font-weight: 700;
+  cursor: pointer;
 }
 
 .create input:hover{
@@ -40,6 +41,13 @@
   grid-template-areas: "boxProduct boxProduct boxProduct boxProduct boxProduct";
   padding: 10px;
   width: 100%;
+  /* animation: up 3s ease-in ; */
+  /* animation-delay: ; */
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+
+
 }
 .boxProduct{
   /* width: 150px; */
@@ -49,7 +57,7 @@
   background-color: var(--white-rgba);
   border: 3px solid var(--green);
   padding: 20px 20px 20px 20px;
-  margin: 25px;
+   margin: 25px;
   min-height: 200px;
   border-radius: 10px;
 }

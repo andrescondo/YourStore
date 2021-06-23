@@ -62,8 +62,10 @@ const HomeFrom = ({
             // value={form.code} aun en desarrollo
           />
         </label>
-        {/* <ModalButton /> */}
-        <input type="submit" value="Guardar" />
+        <div className="Form-button">
+          <input type="submit" value="Guardar" />
+          {/* <input type="submit" value="Cancelar" /> */}
+        </div>
       </form>
     </div>
   );
