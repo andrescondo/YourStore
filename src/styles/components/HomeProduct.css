@@ -43,10 +43,12 @@
   width: 100%;
   /* animation: up 3s ease-in ; */
   /* animation-delay: ; */
-  animation: 2s ease-in-out 0 normal forwards;
-
-
+  transition-delay:2s ;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+  /* scroll-behavior: smooth; */
 }
+
 .boxProduct{
   /* width: 150px; */
   grid: boxProduct;

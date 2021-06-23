@@ -21,8 +21,6 @@ const HomeFrom = ({
   openForm,
 }) => {
   const [form, setForm] = useState(initialForm);
-  const n = nameForm,
-    c = codeForm;
 
   const handleChange = (e) => {
     setForm({
@@ -34,7 +32,7 @@ const HomeFrom = ({
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!form.nameForm || !form.codeFrom) {
+    if (!form.name || !form.code) {
       alert('Esta vacio');
       return;
     }
@@ -55,21 +53,21 @@ const HomeFrom = ({
 
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">
-          <p>{n}</p>
+          <p>{nameForm}</p>
           <input
             type="text"
             name="name"
-            placeholder={n}
+            placeholder={nameForm}
             onChange={handleChange}
             value={form.name} //algo
           />
         </label>
         <label htmlFor="code">
-          <p>{c}</p>
+          <p>{codeForm}</p>
           <input
             type="text"
             name="code"
-            placeholder={c}
+            placeholder={codeForm}
             onChange={handleChange}
             value={form.code} //algo
           />

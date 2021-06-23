@@ -30,7 +30,11 @@ const HomeProduct = () => {
   const [formState, setFormState] = useState(false);
   const [dataToEdit, setDataToEdit] = useState(null);
 
-  const createData = (data) => {};
+  const createData = (data) => {
+    data.id = Date.now();
+    console.log(Date.now());
+    setDb([...db, data]);
+  };
 
   const updateData = (data) => {};
 
@@ -75,11 +79,8 @@ const HomeProduct = () => {
               <BoxProduct
                 data={data}
                 key={data.id}
-                createData={createData}
-                updateData={updateData}
                 setDataToEdit={setDataToEdit}
                 deleteData={deleteData}
-                dataToEdit={dataToEdit}
               />
             ))
           ) /*llamamiento de datos de manera dinamica*/
