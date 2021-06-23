@@ -44,7 +44,14 @@ const HomeFrom = ({
       return;
     }
 
-    form.id === null ? createData(form) : updateData(form);
+    // form.id === null ? createData(form) : updateData(form);
+    if (form.id === null) {
+      createData(form);
+      openForm();
+    } else {
+      updateData(form);
+      openForm();
+    }
 
     handleReset();
   };
