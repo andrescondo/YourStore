@@ -24,10 +24,8 @@ const HomeProduct = () => {
     api.get(url).then((res) => {
       if (!res.err) {
         setDb(res);
-        setError(null);
       } else {
         setDb(null);
-        setError(res);
       }
     });
     setLoading(false);
@@ -82,7 +80,6 @@ const HomeProduct = () => {
         {/* <BoxProduct /> llamamiento de datos de manera directa */}
 
         {loading && <LoadingData />}
-        {/* {error && <ErrorData/>} */}
         {db ? (
           db.length === 0 ? (
             <p>Sin datos</p>
