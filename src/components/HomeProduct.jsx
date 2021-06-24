@@ -6,12 +6,13 @@ import '../styles/components/HomeProduct.css';
 import BoxProduct from './BoxProduct';
 import HomeFrom from './HomeFrom';
 import LoadingData from './LoadingData';
+import ErrorData from './ErrorData';
 
 const HomeProduct = () => {
   const [db, setDb] = useState([]);
   const [formState, setFormState] = useState(false);
   const [dataToEdit, setDataToEdit] = useState(null);
-  // const [ error, setError ] = useState(null);
+  const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const api = helpHttp();
@@ -23,8 +24,10 @@ const HomeProduct = () => {
     api.get(url).then((res) => {
       if (!res.err) {
         setDb(res);
+        setError(null);
       } else {
         setDb(null);
+        setError(res);
       }
     });
     setLoading(false);
@@ -78,11 +81,13 @@ const HomeProduct = () => {
       <div className="boxCreate">
         {/* <BoxProduct /> llamamiento de datos de manera directa */}
 
-        {loading ? <LoadingData /> : ''}
-        {
+        {loading && <LoadingData />}
+        {/* {error && <ErrorData/>} */}
+        {db ? (
           db.length === 0 ? (
-            <p></p>
+            <p>Sin datos</p>
           ) : (
+            /*llamamiento de datos de manera dinamica*/
             db.map((data) => (
               <BoxProduct
                 data={data}
@@ -92,8 +97,10 @@ const HomeProduct = () => {
                 openForm={openForm}
               />
             ))
-          ) /*llamamiento de datos de manera dinamica*/
-        }
+          )
+        ) : (
+          <ErrorData />
+        )}
       </div>
     </div>
   );
