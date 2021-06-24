@@ -1,21 +1,29 @@
 export const helpHttp = () => {
   const customFetch = (endpoint, options) => {
+    //los header por defecto al momento de realizar la peticion
     const defaultHeader = {
       accept: 'application/json',
     };
-
+    //en caso de que no responda abortar la opeacion
     const controller = new AbortController();
     options.signal = controller.signal;
 
+    //si no trae por defecto los metodos, se le asigna GET
     options.method = options.method || 'GET';
-    options.headers = options.headers
-      ? { ...defaultHeader, ...options.headers }
-      : defaultHeader;
 
+    options.headers = options.headers
+      ? //si no trae datos en la cabecera le asigna, los de por defecto, mas el get
+        { ...defaultHeader, ...options.headers }
+      : //si trae solo le asigna los valores por defecto
+        defaultHeader;
+
+    //en caso de que no traiga body se le asigna falso
     options.body = JSON.stringify(options.body) || false;
+    //si es falto las option.body lo elimina para no entregar nada
     if (!options.body) delete options.body;
 
-    //console.log(options);
+    console.log(options.body);
+    //si pasa mas de 3s aborta la operacion
     setTimeout(() => controller.abort(), 3000);
 
     return fetch(endpoint, options)

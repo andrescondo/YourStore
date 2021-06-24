@@ -1,34 +1,32 @@
-import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { helpHttp } from '../helpers/helpHttp';
 
 import '../styles/components/HomeProduct.css';
 
 import BoxProduct from './BoxProduct';
 import HomeFrom from './HomeFrom';
-// import { helpHttp } from "../helpers/helpHttp";
 
-const intitialDbProduct = [
-  {
-    id: 1,
-    name: 'Coca cola',
-    code: 'ADSFSD',
-  },
-  {
-    id: 2,
-    name: 'Big cola',
-    code: 'DSFNDG',
-  },
-  {
-    id: 3,
-    name: 'KFC',
-    code: 'DGDFGD',
-  },
-];
+// const intitialDbProduct = [
+//   {
+//     id: 1,
+//     name: 'Coca cola',
+//     code: 'ADSFSD',
+//   },
+// ];
 
 const HomeProduct = () => {
-  const [db, setDb] = useState(intitialDbProduct);
+  const [db, setDb] = useState([]);
   const [formState, setFormState] = useState(false);
   const [dataToEdit, setDataToEdit] = useState(null);
+
+  let api = helpHttp();
+  let url = 'https://localhost:3004/products';
+
+  useEffect(() => {
+    api.get(url).then((res) => {
+      console.log(res);
+    });
+  }, []);
 
   const createData = (data) => {
     data.id = Date.now();
