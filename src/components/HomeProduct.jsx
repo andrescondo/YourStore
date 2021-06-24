@@ -5,27 +5,29 @@ import '../styles/components/HomeProduct.css';
 
 import BoxProduct from './BoxProduct';
 import HomeFrom from './HomeFrom';
-
-// const intitialDbProduct = [
-//   {
-//     id: 1,
-//     name: 'Coca cola',
-//     code: 'ADSFSD',
-//   },
-// ];
+import LoadingData from './LoadingData';
 
 const HomeProduct = () => {
   const [db, setDb] = useState([]);
   const [formState, setFormState] = useState(false);
   const [dataToEdit, setDataToEdit] = useState(null);
+  // const [ error, setError ] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-  let api = helpHttp();
-  let url = 'https://localhost:3004/products';
+  const api = helpHttp();
+  //asegurarse que el protocolo sea el correcto
+  const url = 'http://localhost:3004/products';
 
   useEffect(() => {
+    setLoading(true);
     api.get(url).then((res) => {
-      console.log(res);
+      if (!res.err) {
+        setDb(res);
+      } else {
+        setDb(null);
+      }
     });
+    setLoading(false);
   }, []);
 
   const createData = (data) => {
@@ -75,9 +77,11 @@ const HomeProduct = () => {
 
       <div className="boxCreate">
         {/* <BoxProduct /> llamamiento de datos de manera directa */}
+
+        {loading ? <LoadingData /> : ''}
         {
           db.length === 0 ? (
-            <p>No hay datos</p>
+            <p></p>
           ) : (
             db.map((data) => (
               <BoxProduct

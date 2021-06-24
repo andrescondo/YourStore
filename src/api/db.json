@@ -4,6 +4,21 @@
       "id": 1,
       "name": "Coca cola",
       "code":"ADSFSD"
+    },
+    { 
+      "id": 2,
+      "name": "Coca cola",
+      "code":"ADSFSD"
+    },
+    { 
+      "id": 3,
+      "name": "Coca cola",
+      "code":"ADSFSD"
+    },
+    { 
+      "id": 4,
+      "name": "Coca cola",
+      "code":"ADSFSD"
     }
   ],
   "store": [
