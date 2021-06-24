@@ -43,7 +43,7 @@ const HomeProduct = () => {
 
   const deleteData = (id) => {
     //se usa el click del modal para validar si quiere eliminar o no
-    let newData = db.filter((el) => el.id != id);
+    let newData = db.filter((el) => el.id !== id);
     setDb(newData);
   };
 
