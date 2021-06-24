@@ -38,13 +38,18 @@ const BoxProduct = ({ data, openForm, setDataToEdit, deleteData }) => {
         <i
           className="fas fa-edit"
           onClick={() => {
-            setDataToEdit(data);
             openForm();
+            setDataToEdit(data);
           }}
         ></i>
 
         <i className="fas fa-trash" onClick={openModalDel}></i>
-        <Modals isOpen={isOpenDel} closeModal={closeModalDel}>
+        <Modals
+          isOpen={isOpenDel}
+          closeModal={closeModalDel}
+          deleteData={deleteData}
+          id={id}
+        >
           <p>¿Desea eliminar el Producto?</p>
         </Modals>
       </div>

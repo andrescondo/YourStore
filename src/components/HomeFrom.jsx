@@ -43,14 +43,15 @@ const HomeFrom = ({
       return;
     }
 
-    form.id === null ? createData(form) : updateData(form);
-    // if (form.id === null) {
-    //   createData(form);
-    //   openForm();
-    // } else {
-    //   updateData(form);
-    //   openForm();
-    // }
+    // form.id === null ? createData(form) : updateData(form);
+    if (form.id === null) {
+      createData(form);
+      openForm();
+    } else {
+      updateData(form);
+      openForm();
+      setForm(initialForm);
+    }
 
     handleReset();
   };
@@ -62,7 +63,7 @@ const HomeFrom = ({
 
   return (
     <div className="HomeProduct-form">
-      <h3>{dataToEdit ? 'Editar Producto' : 'Guardar Producto'}</h3>
+      <h3>{dataToEdit ? 'Editar Producto' : 'Crear Producto'}</h3>
 
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">

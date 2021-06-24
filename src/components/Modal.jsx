@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Modal = ({ children, isOpen, closeModal }) => {
+const Modal = ({ children, isOpen, closeModal, deleteData, id }) => {
   const handleModalContainerClick = (e) => e.stopPropagation();
 
   return (
@@ -16,7 +16,14 @@ const Modal = ({ children, isOpen, closeModal }) => {
 
         <div className="modal-bottom">
           <div className="modal-bottom__box">
-            {/* <button className="modal-save">Si, aceptar</button> */}
+            <button
+              className="modal-save"
+              onClick={() => {
+                deleteData(id);
+              }}
+            >
+              Si, aceptar
+            </button>
             <button type="text" className=" modal-cancel" onClick={closeModal}>
               Cancelar
             </button>

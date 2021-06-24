@@ -1,8 +1,10 @@
 :root{
   --black:#000;
+  --black-rgba:rgba(0,0,0,.56);
   /* --blackSemiLight:#4C4E4E; */
   --white:rgb(250, 245, 245);
   --white-rgba:rgba(225, 225, 225, .4); 
+
   /* paleta azul */
   /* --blue: #1814FA; */
   --blueSemiBlack:#0C0A7A;
