@@ -12,7 +12,6 @@ const HomeProduct = () => {
   const [db, setDb] = useState([]);
   const [formState, setFormState] = useState(false);
   const [dataToEdit, setDataToEdit] = useState(null);
-  const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const api = helpHttp();
