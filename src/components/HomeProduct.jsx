@@ -14,12 +14,11 @@ const HomeProduct = () => {
   const [dataToEdit, setDataToEdit] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const api = helpHttp();
   //asegurarse que el protocolo sea el correcto
   const url = 'http://localhost:3004/products';
 
   useEffect(() => {
-    api.get(url).then((res) => {
+    helpHttp().get(url).then((res) => {
       setLoading(true);
       if (!res.err) {
         setDb(res);
