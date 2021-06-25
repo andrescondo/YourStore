@@ -24,7 +24,6 @@ const HomeProduct = () => {
       if (!res.err) {
         setDb(res);
         setLoading(() => !loading);
-        console.log(loading);
       } else {
         setDb(null);
       }

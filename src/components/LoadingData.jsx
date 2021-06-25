@@ -3,11 +3,13 @@ import '../styles/components/LoadingData.css';
 
 const LoadingData = () => {
   return (
-    <div className="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+    <div className="LoadingData">
+      <div className="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
   );
 };
