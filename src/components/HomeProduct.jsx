@@ -12,22 +12,23 @@ const HomeProduct = () => {
   const [db, setDb] = useState([]);
   const [formState, setFormState] = useState(false);
   const [dataToEdit, setDataToEdit] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const api = helpHttp();
   //asegurarse que el protocolo sea el correcto
   const url = 'http://localhost:3004/products';
 
   useEffect(() => {
-    setLoading(true);
+    setLoading(() => loading);
     api.get(url).then((res) => {
       if (!res.err) {
         setDb(res);
+        setLoading(() => !loading);
+        console.log(loading);
       } else {
         setDb(null);
       }
     });
-    setLoading(false);
   }, []);
 
   const createData = (data) => {
@@ -78,10 +79,14 @@ const HomeProduct = () => {
       <div className="boxCreate">
         {/* <BoxProduct /> llamamiento de datos de manera directa */}
 
-        {loading && <LoadingData />}
+        {/* {loading&&<LoadingData />} */}
         {db ? (
           db.length === 0 ? (
-            <p>Sin datos</p>
+            <div>
+              <p>Sin datos</p>
+
+              {loading && <LoadingData /> /*loader*/}
+            </div>
           ) : (
             /*llamamiento de datos de manera dinamica*/
             db.map((data) => (

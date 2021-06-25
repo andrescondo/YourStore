@@ -22,7 +22,7 @@ export const helpHttp = () => {
     //si es falto las option.body lo elimina para no entregar nada
     if (!options.body) delete options.body;
 
-    console.log(options.body);
+    // console.log(options.body);
     //si pasa mas de 3s aborta la operacion
     setTimeout(() => controller.abort(), 3000);
 
