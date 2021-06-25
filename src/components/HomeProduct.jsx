@@ -19,14 +19,14 @@ const HomeProduct = () => {
   const url = 'http://localhost:3004/products';
 
   useEffect(() => {
-    setLoading(() => loading);
     api.get(url).then((res) => {
+      setLoading(true);
       if (!res.err) {
         setDb(res);
-        setLoading(() => !loading);
       } else {
         setDb(null);
       }
+      setLoading(false);
     });
   }, []);
 
@@ -78,13 +78,12 @@ const HomeProduct = () => {
       <div className="boxCreate">
         {/* <BoxProduct /> llamamiento de datos de manera directa */}
 
-        {/* {loading&&<LoadingData />} */}
         {db ? (
           db.length === 0 ? (
             <div>
               <p>Sin datos</p>
 
-              {loading && <LoadingData /> /*loader*/}
+              {/* {loading && <LoadingData /> /*loader} */}
             </div>
           ) : (
             /*llamamiento de datos de manera dinamica*/
@@ -102,6 +101,7 @@ const HomeProduct = () => {
           <ErrorData />
         )}
       </div>
+      {loading && <LoadingData />}
     </div>
   );
 };
