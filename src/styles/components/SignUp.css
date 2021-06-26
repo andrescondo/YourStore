@@ -8,9 +8,9 @@
 .signup-box{
   margin:90px 0;
   padding:60px 45px;
-  border: 1px solid var(--black);
+  border: 2px solid var(--blueSemiLight);
   border-radius: 20px;
-  background-color: var(--blueSemiLight);
+  background-color: var(--grey-rgba);
   /* color: var(--blueBlack); */
   color: var(--white);
   font-weight: 700;
@@ -19,7 +19,11 @@
   display: flex;
   justify-content: center;
   font-size: 23px;
-  color: var(--black);
+  color: var(--white);
+}
+.signup-box form label{
+  color: var(--white);
+
 }
 
 label select{

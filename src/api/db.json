@@ -1,32 +1,41 @@
 {
   "products": [
-    { 
+    {
       "id": 1,
       "name": "Coca cola",
-      "code":"ADSFSD"
+      "code": "ADSFSD"
     },
-    { 
+    {
       "id": 2,
       "name": "Coca cola",
-      "code":"ADSFSD"
+      "code": "ADSFSD"
     },
-    { 
+    {
       "id": 3,
       "name": "Coca cola",
-      "code":"ADSFSD"
+      "code": "ADSFSD"
     },
-    { 
+    {
       "id": 4,
       "name": "Coca cola",
-      "code":"ADSFSD"
+      "code": "ADSFSD"
+    },
+    {
+      "name": "Nestlé",
+      "code": "ASSDSA",
+      "id": 1624587013199
+    },
+    {
+      "name": "Nestlé",
+      "code": "ASDSSA",
+      "id": 1624587521447
     }
   ],
   "store": [
-    { 
+    {
       "id": 1,
       "title": "some comment",
-      "list-products":[]
+      "list-products": []
     }
   ]
-  
 }

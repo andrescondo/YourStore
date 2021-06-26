@@ -42,6 +42,7 @@
   padding: 10px;
   width: 100%;
   /* animation-name: ld-float-ttb-in; */
+  transition: all .5s ease-in-out; /*comporbar si sirve*/
 }
 
 .boxProduct{
@@ -49,7 +50,7 @@
   grid: boxProduct;
   display: flex;
   flex-direction: column;
-  background-color: var(--black-rgba);
+  background-color: var(--grey-rgba);
   border: .7px solid var(--green);
   /* box-shadow: 1px 1px 5px 1px var(--green); */
   padding: 20px 20px 20px 20px;

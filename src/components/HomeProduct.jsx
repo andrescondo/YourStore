@@ -14,24 +14,41 @@ const HomeProduct = () => {
   const [dataToEdit, setDataToEdit] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  const api = helpHttp();
   //asegurarse que el protocolo sea el correcto
   const url = 'http://localhost:3004/products';
 
   useEffect(() => {
-    helpHttp().get(url).then((res) => {
-      setLoading(true);
-      if (!res.err) {
-        setDb(res);
-      } else {
-        setDb(null);
-      }
-      setLoading(false);
-    });
+    helpHttp()
+      .get(url)
+      .then((res) => {
+        setLoading(true);
+        if (!res.err) {
+          setDb(res);
+        } else {
+          setDb(null);
+        }
+        setLoading(false);
+        console.log(res.length + 1);
+      });
   }, []);
 
   const createData = (data) => {
-    data.id = Date.now();
-    console.log(Date.now());
+    data.id = db.length + 1;
+    console.log(db.length + 1);
+    console.log();
+    let options = {
+      body: data,
+      headers: { 'content-type': 'application/json' },
+    };
+    api.post(url, options).then((res) => {
+      console.log(res);
+      if (!res.err) {
+        setDb(...db, res);
+      } else {
+        console.log(res.err);
+      }
+    });
     setDb([...db, data]);
   };
 
