@@ -15,9 +15,11 @@ const HomeProduct = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const [updateDb, setUpdateDb] = useState([]);
+
   const api = helpHttp();
   //asegurarse que el protocolo sea el correcto
-  const url = 'http://localhost:3004/product';
+  const url = 'http://localhost:3004/products';
 
   useEffect(() => {
     helpHttp()
@@ -94,7 +96,9 @@ const HomeProduct = () => {
       )}
 
       <div className="boxCreate">
-        {error && <p>Hay un error</p>}
+        {error && (
+          <ErrorData msg={`Error ${error.status}: ${error.statusText}`} />
+        )}
         {/* <BoxProduct /> llamamiento de datos de manera directa */}
         {db && (
           <BoxProduct

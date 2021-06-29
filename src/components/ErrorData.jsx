@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ErrorData = () => {
+const ErrorData = ({ msg }) => {
   return (
     <div>
-      <p>Hubo un error con el servidor</p>
+      <p>{msg}</p>
     </div>
   );
 };

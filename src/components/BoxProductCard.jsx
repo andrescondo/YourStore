@@ -5,10 +5,10 @@ import '../styles/components/HomeProduct.css';
 
 import imageDefault from '../img/default.png';
 
-const BoxProductCard = (data, openForm, setDataToEdit, deleteData) => {
+const BoxProductCard = ({ data, openForm, setDataToEdit, deleteData }) => {
   const [isOpenPlus, openModalPlus, closeModalPlus] = useModal(false);
   const [isOpenDel, openModalDel, closeModalDel] = useModal(false);
-  const { name, code, id } = data.data;
+  const { name, code, id } = data;
   // console.log(name);
 
   return (
