@@ -36,7 +36,7 @@ export const helpHttp = () => {
               statusText: res.statusText || 'Ocurrió un error',
             })
       )
-      .catch((err) => err);
+      .catch(() => []);
   };
 
   const get = (url, options = {}) => customFetch(url, options);

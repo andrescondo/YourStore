@@ -36,7 +36,6 @@ const HomeProduct = () => {
   const createData = (data) => {
     data.id = db.length + 1;
     console.log(db.length + 1);
-    console.log();
     let options = {
       body: data,
       headers: { 'content-type': 'application/json' },
@@ -93,16 +92,24 @@ const HomeProduct = () => {
 
       <div className="boxCreate">
         {/* <BoxProduct /> llamamiento de datos de manera directa */}
-
-        {db ? (
+        {db && (
+          <BoxProduct
+            data={db}
+            key={db.id}
+            setDataToEdit={setDataToEdit}
+            deleteData={deleteData}
+            openForm={openForm}
+          />
+        )}
+        {/* {db ? (
           db.length === 0 ? (
             <div>
               <p>Sin datos</p>
 
-              {/* {loading && <LoadingData /> /*loader} */}
+              {/* {loading && <LoadingData /> /*loader} }
             </div>
           ) : (
-            /*llamamiento de datos de manera dinamica*/
+            /*llamamiento de datos de manera dinamica
             db.map((data) => (
               <BoxProduct
                 data={data}
@@ -115,7 +122,7 @@ const HomeProduct = () => {
           )
         ) : (
           <ErrorData />
-        )}
+        )} */}
       </div>
       {loading && <LoadingData />}
     </div>

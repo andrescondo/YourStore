@@ -42,7 +42,7 @@
   padding: 10px;
   width: 100%;
   /* animation-name: ld-float-ttb-in; */
-  transition: all .5s ease-in-out; /*comporbar si sirve*/
+  transition: all .25s ease-in-out; /*comporbar si sirve*/
 }
 
 .boxProduct{
