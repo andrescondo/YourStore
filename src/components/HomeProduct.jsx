@@ -13,10 +13,11 @@ const HomeProduct = () => {
   const [formState, setFormState] = useState(false);
   const [dataToEdit, setDataToEdit] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const api = helpHttp();
   //asegurarse que el protocolo sea el correcto
-  const url = 'http://localhost:3004/products';
+  const url = 'http://localhost:3004/product';
 
   useEffect(() => {
     helpHttp()
@@ -25,13 +26,15 @@ const HomeProduct = () => {
         setLoading(true);
         if (!res.err) {
           setDb(res);
+          setError(null);
         } else {
           setDb(null);
+          setError(res);
         }
         setLoading(false);
         console.log(res.length + 1);
       });
-  }, []);
+  }, [url]);
 
   const createData = (data) => {
     data.id = db.length + 1;
@@ -91,6 +94,7 @@ const HomeProduct = () => {
       )}
 
       <div className="boxCreate">
+        {error && <p>Hay un error</p>}
         {/* <BoxProduct /> llamamiento de datos de manera directa */}
         {db && (
           <BoxProduct
@@ -101,28 +105,6 @@ const HomeProduct = () => {
             openForm={openForm}
           />
         )}
-        {/* {db ? (
-          db.length === 0 ? (
-            <div>
-              <p>Sin datos</p>
-
-              {/* {loading && <LoadingData /> /*loader} }
-            </div>
-          ) : (
-            /*llamamiento de datos de manera dinamica
-            db.map((data) => (
-              <BoxProduct
-                data={data}
-                key={data.id}
-                setDataToEdit={setDataToEdit}
-                deleteData={deleteData}
-                openForm={openForm}
-              />
-            ))
-          )
-        ) : (
-          <ErrorData />
-        )} */}
       </div>
       {loading && <LoadingData />}
     </div>

@@ -9,7 +9,7 @@ const BoxProductCard = (data, openForm, setDataToEdit, deleteData) => {
   const [isOpenPlus, openModalPlus, closeModalPlus] = useModal(false);
   const [isOpenDel, openModalDel, closeModalDel] = useModal(false);
   const { name, code, id } = data.data;
-  console.log(name);
+  // console.log(name);
 
   return (
     //usar este como componente hijo de boxproduct, y aqui recien hacer el map()
