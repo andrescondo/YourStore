@@ -1,11 +1,6 @@
 {
   "products": [
     {
-      "name": "Nestlé",
-      "code": "sdfsdf",
-      "id": "1-1625023834554"
-    },
-    {
       "name": "Kentucky Fried Chicken ",
       "code": "sadsfsdf",
       "id": "2-1625023846455"
@@ -16,9 +11,9 @@
       "id": "3-1625023853793"
     },
     {
-      "name": "Nestlé",
-      "code": "FFFAAA",
-      "id": "4-1625078129050"
+      "name": "Kentucky Fried Chicken ",
+      "code": "FFFFFF",
+      "id": "3-1625078682585"
     }
   ],
   "store": [

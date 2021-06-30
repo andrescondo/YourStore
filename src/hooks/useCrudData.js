@@ -11,6 +11,8 @@ export default function useCrudData(url) {
   const [updateDb, setUpdateDb] = useState([]);
 
   const api = helpHttp();
+  console.log(url);
+  // const url = url;
   // const url = 'http://localhost:3004/products';MANDAR ESTE DATO DESDE EL COMPONENTE
   //asegurarse  ^^ que el protocolo sea el correcto
 
@@ -28,13 +30,13 @@ export default function useCrudData(url) {
         }
         setLoading(false);
       });
-  }, [updateDb]);
+  }, [updateDb]); // eslint-disable-line react-hooks/exhaustive-deps
   //  ^^^ Importante, se usa este hooks de estado para actualizar el effect,
   //cambia de valor siempre que se actualice o cree un nuevo dato,
   //permitiendo asi renderizar los componentes nuevos
 
   const createData = (data) => {
-    data.id = `${db.length + 1}-${Date.now()}`;
+    data.id = `${db.length + 1}-${Date.now()}`; //id que para los elementos creados
     let options = {
       body: data,
       headers: { 'content-type': 'application/json' },
