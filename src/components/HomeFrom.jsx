@@ -73,7 +73,8 @@ const HomeFrom = ({
             name="name"
             placeholder={nameForm}
             onChange={handleChange}
-            value={form.name} //algo
+            value={form.name}
+            maxLength="25" //limite de caracteres aceptados
           />
         </label>
         <label htmlFor="code">
@@ -83,7 +84,8 @@ const HomeFrom = ({
             name="code"
             placeholder={codeForm}
             onChange={handleChange}
-            value={form.code} //algo
+            value={form.code}
+            maxLength="8" //limite de caracteres aceptados
           />
         </label>
         <div className="Form-button">
