@@ -1,5 +1,4 @@
 import React from 'react';
-// import { helpHttp } from '../helpers/helpHttp';
 import useCrudData from '../hooks/useCrudData';
 
 import '../styles/components/HomeProduct.css';
@@ -11,6 +10,7 @@ import ErrorData from './ErrorData';
 
 const HomeProduct = () => {
   const url = 'http://localhost:3004/products';
+  //asegurarse  ^^ el protocolo debe ser el correcto
 
   const {
     db,
@@ -23,7 +23,7 @@ const HomeProduct = () => {
     dataToEdit,
     setDataToEdit,
     error,
-  } = useCrudData(url);
+  } = useCrudData(url); //CUSTOM HOOK para fecth data
 
   return (
     <div className="HomeProduct">
@@ -52,7 +52,6 @@ const HomeProduct = () => {
         {error && (
           <ErrorData msg={`Error ${error.status}: ${error.statusText}`} />
         )}
-        {/* <BoxProduct /> llamamiento de datos de manera directa */}
         {db && (
           <BoxProduct
             data={db}

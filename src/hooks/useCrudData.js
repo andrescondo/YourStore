@@ -11,10 +11,6 @@ export default function useCrudData(url) {
   const [updateDb, setUpdateDb] = useState([]);
 
   const api = helpHttp();
-  console.log(url);
-  // const url = url;
-  // const url = 'http://localhost:3004/products';MANDAR ESTE DATO DESDE EL COMPONENTE
-  //asegurarse  ^^ que el protocolo sea el correcto
 
   useEffect(() => {
     helpHttp()
@@ -67,7 +63,7 @@ export default function useCrudData(url) {
         let newData = db.map((d) => (d.id === data.id ? data : d));
         setDb(newData);
         // setDb(...db, res);
-        setUpdateDb(newData);
+        setUpdateDb(res);
         // renderiza los elementos una vez creados
         //NOTA: optimizar en el networks mas adelante
       } else {
@@ -94,7 +90,6 @@ export default function useCrudData(url) {
 
   const openForm = () => {
     setFormState(!formState);
-    // console.log(formState);
   };
 
   return {
