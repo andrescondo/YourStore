@@ -63,12 +63,29 @@ const HomeProduct = () => {
       }
     });
     // setUpdateDb(false);
-    setDb([...db, data]);
+    // setDb([...db, data]);
   };
 
   const updateData = (data) => {
-    let newData = db.map((d) => (d.id === data.id ? data : d));
-    setDb(newData);
+    let endpoint = `${url}/${data.id}`;
+    let options = {
+      body: data,
+      headers: { 'content-type': 'application/json' },
+    };
+
+    api.put(endpoint, options).then((res) => {
+      console.log(res);
+      if (!res.err) {
+        let newData = db.map((d) => (d.id === data.id ? data : d));
+        setDb(newData);
+        // setDb(...db, res);
+        setUpdateDb(newData);
+        // renderiza los elementos una vez creados
+        //NOTA: optimizar en el networks mas adelante
+      } else {
+        console.log(res.err);
+      }
+    });
   };
 
   const deleteData = (id) => {

@@ -12,7 +12,7 @@
     },
     {
       "name": "Nestlé",
-      "code": "sadsfsdf",
+      "code": "EEEEEE",
       "id": 3
     },
     {
@@ -24,6 +24,11 @@
       "name": "Kentucky Fried Chicken ",
       "code": "ASDSSA",
       "id": 5
+    },
+    {
+      "name": "Nestlé",
+      "code": "FFFFFF",
+      "id": 6
     }
   ],
   "store": [
