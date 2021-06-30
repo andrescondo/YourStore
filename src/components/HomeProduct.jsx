@@ -14,12 +14,12 @@ const HomeProduct = () => {
   const [dataToEdit, setDataToEdit] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
   const [updateDb, setUpdateDb] = useState([]);
+  // const [updateDb, setUpdateDb] = useState([]);
 
   const api = helpHttp();
-  //asegurarse que el protocolo sea el correcto
   const url = 'http://localhost:3004/products';
+  //asegurarse  ^^ que el protocolo sea el correcto
 
   useEffect(() => {
     helpHttp()
@@ -29,18 +29,24 @@ const HomeProduct = () => {
         if (!res.err) {
           setDb(res);
           setError(null);
+          // setUpdateDb(!updateDb);
         } else {
           setDb(null);
           setError(res);
         }
         setLoading(false);
-        console.log(res.length + 1);
+        console.log(res.length);
+        // console.log(res.length + 1);
       });
-  }, [url]);
+    // setUpdateDb(!updateDb);
+  }, [updateDb]);
+  //  ^^^ Importante, se usa este hooks de estado para actualizar el effect,
+  //cambia de valor siempre que se actualice o cree un nuevo dato,
+  //permitiendo asi renderizar los componentes nuevos
 
   const createData = (data) => {
     data.id = db.length + 1;
-    console.log(db.length + 1);
+    // console.log(db.length + 1);
     let options = {
       body: data,
       headers: { 'content-type': 'application/json' },
@@ -49,10 +55,14 @@ const HomeProduct = () => {
       console.log(res);
       if (!res.err) {
         setDb(...db, res);
+        setUpdateDb(res);
+        // renderiza los elementos una vez creados
+        //NOTA: optimizar en el networks mas adelante
       } else {
         console.log(res.err);
       }
     });
+    // setUpdateDb(false);
     setDb([...db, data]);
   };
 
