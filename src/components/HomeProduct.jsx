@@ -45,7 +45,8 @@ const HomeProduct = () => {
   //permitiendo asi renderizar los componentes nuevos
 
   const createData = (data) => {
-    data.id = db.length + 1;
+    data.id = `${db.length + 1}-${Date.now()}`;
+    // data.id = db.length + 1+ Date.now();
     // console.log(db.length + 1);
     let options = {
       body: data,
@@ -89,9 +90,19 @@ const HomeProduct = () => {
   };
 
   const deleteData = (id) => {
+    let endpoint = `${url}/${id}`;
+    let options = {
+      headers: { 'content-type': 'application/json' },
+    };
+    api.del(endpoint, options).then((res) => {
+      if (!res.err) {
+        let newData = db.filter((el) => el.id !== id);
+        setDb(newData);
+      } else {
+        setError(res);
+      }
+    });
     //se usa el click del modal para validar si quiere eliminar o no
-    let newData = db.filter((el) => el.id !== id);
-    setDb(newData);
   };
 
   const openForm = () => {

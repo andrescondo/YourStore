@@ -1,34 +1,19 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Coca cola",
-      "code": "ADSFSD"
-    },
-    {
       "name": "Nestlé",
-      "code": "ASDSSA",
-      "id": 2
-    },
-    {
-      "name": "Nestlé",
-      "code": "EEEEEE",
-      "id": 3
-    },
-    {
-      "name": "Bonice",
-      "code": "FFFAAA",
-      "id": 4
+      "code": "sdfsdf",
+      "id": "1-1625023834554"
     },
     {
       "name": "Kentucky Fried Chicken ",
-      "code": "ASDSSA",
-      "id": 5
+      "code": "sadsfsdf",
+      "id": "2-1625023846455"
     },
     {
-      "name": "Nestlé",
-      "code": "FFFFFF",
-      "id": 6
+      "name": "Bonice",
+      "code": "sadsfsdf",
+      "id": "3-1625023853793"
     }
   ],
   "store": [
