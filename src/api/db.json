@@ -2,13 +2,18 @@
   "products": [
     {
       "name": "Bonice",
-      "code": "sadsfsdf",
+      "code": "FFFAAA",
       "id": "3-1625023853793"
     },
     {
       "name": "Nestlé",
       "code": "ASDFGA",
       "id": "4-1625080950795"
+    },
+    {
+      "name": "PROCAN",
+      "code": "bbbbbbb",
+      "id": "4-1625084986481"
     }
   ],
   "store": [

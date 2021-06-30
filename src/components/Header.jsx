@@ -19,7 +19,9 @@ const Header = () => {
           </li>
           <li>
             {/* Redirecion a pantalla de registrarse */}
-            <Link to="signup">Sign Up</Link>
+            <Link to="signup" className="signup">
+              Sign Up
+            </Link>
           </li>
         </nav>
       </div>

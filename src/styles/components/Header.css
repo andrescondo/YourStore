@@ -18,6 +18,10 @@
 .Header-nav li a{
   border-radius: 30px;
 }
+.Header-nav__help li .signup{
+  border: 2px solid var(--green);
+  margin: 0px 10px;
+}
 
 .Header-nav__help li a:hover{
   /* color: var(--blue); */

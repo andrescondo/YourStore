@@ -51,6 +51,7 @@ const BoxProductCard = ({ data, openForm, setDataToEdit, deleteData }) => {
           closeModal={closeModalDel}
           deleteData={deleteData}
           id={id}
+          nameButton={'delete'}
         >
           <p>¿Desea eliminar el Producto?</p>
         </Modals>

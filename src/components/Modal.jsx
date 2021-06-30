@@ -1,7 +1,20 @@
 import React from 'react';
 
-const Modal = ({ children, isOpen, closeModal, deleteData, id }) => {
+const Modal = ({
+  children,
+  isOpen,
+  closeModal,
+  deleteData,
+  id,
+  nameButton,
+}) => {
   const handleModalContainerClick = (e) => e.stopPropagation();
+
+  const action = () => {
+    if (nameButton === 'delete') {
+      deleteData(id);
+    }
+  };
 
   return (
     <article className={`modal ${isOpen && 'is-open'}`} onClick={closeModal}>
@@ -16,12 +29,7 @@ const Modal = ({ children, isOpen, closeModal, deleteData, id }) => {
 
         <div className="modal-bottom">
           <div className="modal-bottom__box">
-            <button
-              className="modal-save"
-              onClick={() => {
-                deleteData(id);
-              }}
-            >
+            <button className="modal-save" onClick={action}>
               Si, aceptar
             </button>
             <button type="text" className=" modal-cancel" onClick={closeModal}>
