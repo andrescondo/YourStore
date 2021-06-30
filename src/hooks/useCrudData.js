@@ -11,6 +11,7 @@ export default function useCrudData(url) {
   const [updateDb, setUpdateDb] = useState([]);
 
   const api = helpHttp();
+  //asegurarse  ^^ que el protocolo sea el correcto
 
   useEffect(() => {
     helpHttp()

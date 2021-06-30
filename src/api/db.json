@@ -18,9 +18,24 @@
   ],
   "store": [
     {
-      "id": 1,
-      "title": "some comment",
-      "list-products": []
+      "name": "Productos de limpieza",
+      "code": "sadsdf",
+      "id": "2-1625095239413"
+    },
+    {
+      "name": "Importadora",
+      "code": "ASSDSA",
+      "id": "2-1625095496244"
+    },
+    {
+      "name": "Alimentos",
+      "code": "ASSDSA",
+      "id": "3-1625095557617"
+    },
+    {
+      "name": "Cosmeticos",
+      "code": "sadsfsdf",
+      "id": "4-1625095574593"
     }
   ]
 }

@@ -2,29 +2,67 @@ import React from 'react';
 
 import '../styles/components/HomeStore.css';
 
+import useCrudData from '../hooks/useCrudData';
 import BoxStore from './BoxStore';
-import Modals from './Modals';
 import HomeFrom from './HomeFrom';
-import { useModal } from '../hooks/useModal';
+import LoadingData from './LoadingData';
+import ErrorData from './ErrorData';
 
 const HomeStore = () => {
-  const [isOpen, openModal, closeModal] = useModal(false);
+  // const [isOpen, openModal, closeModal] = useModal(false);
+  const url = 'http://localhost:3004/store';
+  //asegurarse  ^^ el protocolo debe ser el correcto
+
+  const {
+    db,
+    deleteData,
+    loading,
+    formState,
+    openForm,
+    updateData,
+    createData,
+    dataToEdit,
+    setDataToEdit,
+    error,
+  } = useCrudData(url); //CUSTOM HOOK para fecth data
 
   return (
     <div className="HomeStore">
       <div className="create">
-        <input type="button" value="Crear Bodega" onClick={openModal} />
-        <Modals isOpen={isOpen} closeModal={closeModal}>
-          <HomeFrom
-            title="Crear Bodega"
-            name="Ingrese nombre de la bodega"
-            code="Ingrese código de la bodega"
-          ></HomeFrom>
-        </Modals>
+        <input
+          type="button"
+          value={!formState ? 'Crear Bodega' : 'Cancelar'}
+          onClick={openForm}
+        />
       </div>
+      {formState ? (
+        <HomeFrom
+          nameForm="Ingrese nombre de la bodega"
+          codeForm="Ingrese código de la bodega"
+          createData={createData}
+          updateData={updateData}
+          dataToEdit={dataToEdit}
+          setDataToEdit={setDataToEdit}
+          openForm={openForm}
+        />
+      ) : (
+        ''
+      )}
       <div className="createStore">
-        <BoxStore />
+        {error && (
+          <ErrorData msg={`Error ${error.status}: ${error.statusText}`} />
+        )}
+        {db && (
+          <BoxStore
+            data={db}
+            key={db.id}
+            setDataToEdit={setDataToEdit}
+            deleteData={deleteData}
+            openForm={openForm}
+          />
+        )}
       </div>
+      {loading && <LoadingData />}
     </div>
   );
 };
