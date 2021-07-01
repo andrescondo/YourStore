@@ -13,6 +13,8 @@ const Modal = ({
   const action = () => {
     if (nameButton === 'delete') {
       deleteData(id);
+    } else if (nameButton === 'addStore') {
+      alert('Funciona');
     }
   };
 

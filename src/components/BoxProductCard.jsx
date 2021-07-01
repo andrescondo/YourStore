@@ -1,6 +1,7 @@
 import React from 'react';
 import { useModal } from '../hooks/useModal';
 import Modals from './Modals';
+import BoxProductPlus from './BoxProductsPlus';
 import '../styles/components/HomeProduct.css';
 
 import imageDefault from '../img/default.png';
@@ -16,32 +17,29 @@ const BoxProductCard = ({
   const [isOpenDel, openModalDel, closeModalDel] = useModal(false);
   const { name, code, id } = data;
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(e);
+    alert('Si funciona');
+  };
+
   return (
     //usar este como componente hijo de boxproduct, y aqui recien hacer el map()
     <div className="boxProduct">
       <figure>
         <div className="boxProduct-icon">
           <i className="fas fa-plus" onClick={openModalPlus}></i>
-          <Modals isOpen={isOpenPlus} closeModal={closeModalPlus}>
+          <Modals
+            isOpen={isOpenPlus}
+            closeModal={closeModalPlus}
+            nameButton={'addStore'}
+          >
             <div className="boxProducts-modal">
-              <h3>Agregar a Bodega</h3>
-              <div>
-                <p>Eliga la bodega a la que ingresar</p>
-                <p>{name}</p>
-                <p>
-                  {product.map((product) => (
-                    <label htmlFor={product.name} key={product.id}>
-                      <input
-                        type="radio"
-                        name="addStore"
-                        id={product.name}
-                        value={product.name}
-                      />
-                      {product.name} <br />
-                    </label>
-                  ))}
-                </p>
-              </div>
+              <BoxProductPlus
+                handleSubmit={handleSubmit}
+                data={data}
+                product={product}
+              />
             </div>
           </Modals>
         </div>
