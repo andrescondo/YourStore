@@ -5,11 +5,16 @@ import '../styles/components/HomeProduct.css';
 
 import imageDefault from '../img/default.png';
 
-const BoxProductCard = ({ data, openForm, setDataToEdit, deleteData }) => {
+const BoxProductCard = ({
+  data,
+  openForm,
+  setDataToEdit,
+  deleteData,
+  product,
+}) => {
   const [isOpenPlus, openModalPlus, closeModalPlus] = useModal(false);
   const [isOpenDel, openModalDel, closeModalDel] = useModal(false);
   const { name, code, id } = data;
-  // console.log(name);
 
   return (
     //usar este como componente hijo de boxproduct, y aqui recien hacer el map()
@@ -22,6 +27,20 @@ const BoxProductCard = ({ data, openForm, setDataToEdit, deleteData }) => {
               <h3>Agregar a Bodega</h3>
               <div>
                 <p>Eliga la bodega a la que ingresar</p>
+                <p>{name}</p>
+                <p>
+                  {product.map((product) => (
+                    <label htmlFor={product.name} key={product.id}>
+                      <input
+                        type="radio"
+                        name="addStore"
+                        id={product.name}
+                        value={product.name}
+                      />
+                      {product.name} <br />
+                    </label>
+                  ))}
+                </p>
               </div>
             </div>
           </Modals>

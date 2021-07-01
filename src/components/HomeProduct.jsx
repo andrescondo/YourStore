@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import useCrudData from '../hooks/useCrudData';
+import { helpHttp } from '../helpers/helpHttp';
 
 import '../styles/components/HomeProduct.css';
 
@@ -9,8 +10,24 @@ import LoadingData from './LoadingData';
 import ErrorData from './ErrorData';
 
 const HomeProduct = () => {
+  const [product, setProduct] = useState([]); //addStore
   const url = 'http://localhost:3004/products';
   //asegurarse  ^^ el protocolo debe ser el correcto
+  const urlProduct = 'http://localhost:3004/store'; //addStore
+  // console.log(product);
+
+  useEffect(() => {
+    //addStore
+    helpHttp()
+      .get(urlProduct)
+      .then((res) => {
+        if (!res.err) {
+          setProduct(res);
+        } else {
+          setProduct(null);
+        }
+      });
+  }, []);
 
   const {
     db,
@@ -59,6 +76,7 @@ const HomeProduct = () => {
             setDataToEdit={setDataToEdit}
             deleteData={deleteData}
             openForm={openForm}
+            product={product}
           />
         )}
       </div>

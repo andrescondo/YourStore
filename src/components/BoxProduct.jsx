@@ -2,7 +2,7 @@ import React from 'react';
 import BoxProductCard from './BoxProductCard';
 import '../styles/components/HomeProduct.css';
 
-const BoxProduct = ({ data, openForm, setDataToEdit, deleteData }) => {
+const BoxProduct = ({ data, openForm, setDataToEdit, deleteData, product }) => {
   return (
     <>
       {data.length > 0 ? (
@@ -13,6 +13,7 @@ const BoxProduct = ({ data, openForm, setDataToEdit, deleteData }) => {
             setDataToEdit={setDataToEdit}
             deleteData={deleteData}
             openForm={openForm}
+            product={product}
           />
         ))
       ) : (

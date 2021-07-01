@@ -39,7 +39,7 @@ const HomeFrom = ({
     e.preventDefault();
 
     if (!form.name || !form.code) {
-      alert('Esta vacio');
+      alert('¡El formulario esta vacio!');
       return;
     }
 
