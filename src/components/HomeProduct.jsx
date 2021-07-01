@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import useCrudData from '../hooks/useCrudData';
-import { helpHttp } from '../helpers/helpHttp';
+import useAddStore from '../hooks/useAddStore';
 
 import '../styles/components/HomeProduct.css';
 
@@ -10,25 +10,12 @@ import LoadingData from './LoadingData';
 import ErrorData from './ErrorData';
 
 const HomeProduct = () => {
-  const [product, setProduct] = useState([]); //addStore
   const url = 'http://localhost:3004/products';
   //asegurarse  ^^ el protocolo debe ser el correcto
   const urlProduct = 'http://localhost:3004/store'; //addStore
   // console.log(product);
-
-  useEffect(() => {
-    //addStore
-    helpHttp()
-      .get(urlProduct)
-      .then((res) => {
-        if (!res.err) {
-          setProduct(res);
-        } else {
-          setProduct(null);
-        }
-      });
-  }, []);
-
+  const { product } = useAddStore(urlProduct);
+  console.log(product);
   const {
     db,
     deleteData,
