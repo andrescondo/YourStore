@@ -1,8 +1,6 @@
 import React from 'react';
-// import { useModal } from '../hooks/useModal';
 
 const BoxProductPlus = ({ handleSubmit, product, data }) => {
-  // const [ name, id, code ] = data;
   return (
     <>
       <h3>Agregar a Bodega</h3>
@@ -15,10 +13,10 @@ const BoxProductPlus = ({ handleSubmit, product, data }) => {
               <input
                 type="radio"
                 name="addStore"
-                id={product.name}
+                // id={product.name}
                 value={product.name}
               />
-              {product.name} <br />
+              {product.name}
             </label>
           ))}
           {/* <input type="submit" value="Enviar" /> */}

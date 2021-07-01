@@ -14,28 +14,45 @@
       "name": "Kentucky Fried Chicken",
       "code": "Asdfea",
       "id": "4-1625096036121"
+    },
+    {
+      "name": "Nestlé",
+      "code": "FFFAAA",
+      "id": "4-1625158150778"
+    },
+    {
+      "name": "Coca Cola",
+      "code": "ASDSSA",
+      "id": "5-1625158204104"
+    },
+    {
+      "name": "Nestlé",
+      "code": "ASSDSA",
+      "id": "6-1625158243708"
     }
   ],
   "store": [
     {
       "name": "Productos de limpieza",
       "code": "sadsdf",
-      "id": "2-1625095239413"
+      "id": "2-1625095239413",
+      "addStore": [
+        {
+          "name": "Kentucky Fried Chicken",
+          "code": "Asdfea",
+          "id": "4-1625096036121"
+        }
+      ]
     },
     {
-      "name": "Importadora",
-      "code": "ASSDSA",
-      "id": "2-1625095496244"
-    },
-    {
-      "name": "Alimentos",
-      "code": "ASSDSA",
-      "id": "3-1625095557617"
-    },
-    {
-      "name": "Cosmeticos",
+      "name": "Comida Rapida",
       "code": "sadsfsdf",
-      "id": "4-1625095574593"
+      "id": "2-1625166608934"
+    },
+    {
+      "name": "Comida Organica",
+      "code": "FFFAAA",
+      "id": "3-1625166625580"
     }
   ]
 }

@@ -131,4 +131,18 @@
   align-items: center;
   cursor: pointer;
 }
+/* .boxProducts-modal{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
 
+.boxProducts-modal form{
+  display: flex;
+  flex-direction: column;
+}
+
+.boxProducts-modal label{
+  padding: 10px 5px;
+  width: 50%;
+}

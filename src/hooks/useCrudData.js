@@ -14,6 +14,7 @@ export default function useCrudData(url) {
   //asegurarse  ^^ que el protocolo sea el correcto
 
   useEffect(() => {
+    console.log(url);
     helpHttp()
       .get(url)
       .then((res) => {

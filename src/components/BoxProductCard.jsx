@@ -19,7 +19,7 @@ const BoxProductCard = ({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e);
+    console.log(e.name);
     alert('Si funciona');
   };
 
@@ -28,6 +28,7 @@ const BoxProductCard = ({
     <div className="boxProduct">
       <figure>
         <div className="boxProduct-icon">
+          {/* =============================== */}
           <i className="fas fa-plus" onClick={openModalPlus}></i>
           <Modals
             isOpen={isOpenPlus}
@@ -36,6 +37,7 @@ const BoxProductCard = ({
           >
             <div className="boxProducts-modal">
               <BoxProductPlus
+                //BOTON PARA AÑADIR A UN STORE
                 handleSubmit={handleSubmit}
                 data={data}
                 product={product}
@@ -43,6 +45,8 @@ const BoxProductCard = ({
             </div>
           </Modals>
         </div>
+        {/* ============================= */}
+
         <img src={imageDefault} alt="imagen por defecto" />
       </figure>
       <div className="boxProduct-info">
