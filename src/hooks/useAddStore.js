@@ -15,6 +15,7 @@ export default function useAddStore(urlProduct) {
           setProduct(null);
         }
       });
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   return { product };
 }

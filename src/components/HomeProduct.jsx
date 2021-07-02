@@ -10,12 +10,11 @@ import LoadingData from './LoadingData';
 import ErrorData from './ErrorData';
 
 const HomeProduct = () => {
-  const url = 'http://localhost:3004/products';
+  const url = 'http://localhost:3004/producs';
   //asegurarse  ^^ el protocolo debe ser el correcto
   const urlProduct = 'http://localhost:3004/store'; //addStore
   // console.log(product);
-  const { product } = useAddStore(urlProduct);
-  console.log(product);
+  const { product } = useAddStore(urlProduct); //CUSTOM HOOK PARA EL ADDSTORE
   const {
     db,
     deleteData,
@@ -28,15 +27,31 @@ const HomeProduct = () => {
     setDataToEdit,
     error,
   } = useCrudData(url); //CUSTOM HOOK para fecth data
+  console.log(db);
 
   return (
     <div className="HomeProduct">
       <div className="create">
-        <input
-          type="button"
-          value={!formState ? 'Crear Producto' : 'Cancelar'}
-          onClick={openForm}
-        />
+        {db === null ? (
+          <input
+            id="create"
+            type="button"
+            value={!formState ? 'Crear Producto' : 'Cancelar'}
+            onClick={openForm}
+          />
+        ) : (
+          <input
+            id="create"
+            type="button"
+            value={'Crear Producto'}
+            onClick={() => {
+              alert(
+                'Una disculpa, el servidor esta caido, por eso no puedes hacer esta acción'
+              );
+            }}
+            // disabled
+          />
+        )}
       </div>
       {formState ? (
         <HomeFrom
