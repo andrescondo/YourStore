@@ -29,18 +29,18 @@ const HomeStore = () => {
   return (
     <div className="HomeStore">
       <div className="create">
-        {db === null ? (
+        {/* {!db === null ? ( */}
+        <input
+          id="create"
+          type="button"
+          value={!formState ? 'Crear Bodega' : 'Cancelar'}
+          onClick={openForm}
+        />
+        {/* ) : (
           <input
             id="create"
             type="button"
-            value={!formState ? 'Crear Bodega' : 'Cancelar'}
-            onClick={openForm}
-          />
-        ) : (
-          <input
-            id="create"
-            type="button"
-            value={'Crear Producto'}
+            value={'Crear Bodega'}
             onClick={() => {
               alert(
                 'Una disculpa, el servidor esta caido, por eso no puedes hacer esta acción'
@@ -48,7 +48,7 @@ const HomeStore = () => {
             }}
             // disabled
           />
-        )}
+        )} */}
       </div>
       {formState ? (
         <HomeFrom

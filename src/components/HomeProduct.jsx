@@ -10,7 +10,7 @@ import LoadingData from './LoadingData';
 import ErrorData from './ErrorData';
 
 const HomeProduct = () => {
-  const url = 'http://localhost:3004/producs';
+  const url = 'http://localhost:3004/products';
   //asegurarse  ^^ el protocolo debe ser el correcto
   const urlProduct = 'http://localhost:3004/store'; //addStore
   // console.log(product);
@@ -27,19 +27,19 @@ const HomeProduct = () => {
     setDataToEdit,
     error,
   } = useCrudData(url); //CUSTOM HOOK para fecth data
-  console.log(db);
+  console.log(formState);
 
   return (
     <div className="HomeProduct">
       <div className="create">
-        {db === null ? (
-          <input
-            id="create"
-            type="button"
-            value={!formState ? 'Crear Producto' : 'Cancelar'}
-            onClick={openForm}
-          />
-        ) : (
+        {/* {!db === null ? ( */}
+        <input
+          id="create"
+          type="button"
+          value={!formState ? 'Crear Producto' : 'Cancelar'}
+          onClick={openForm}
+        />
+        {/* ) : (
           <input
             id="create"
             type="button"
@@ -51,7 +51,7 @@ const HomeProduct = () => {
             }}
             // disabled
           />
-        )}
+        )} */}
       </div>
       {formState ? (
         <HomeFrom
