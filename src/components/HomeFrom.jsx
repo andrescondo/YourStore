@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import '../styles/components/HomeFrom.css';
+import BoxProductPlus from './BoxProductsPlus';
 
 // import ModalButton from './ModalButton';
 
@@ -11,6 +12,7 @@ const initialForm = {
 };
 
 const HomeFrom = ({
+  data,
   nameForm,
   codeForm,
   createData,
@@ -18,8 +20,10 @@ const HomeFrom = ({
   dataToEdit,
   setDataToEdit,
   openForm,
+  typeForm,
 }) => {
   const [form, setForm] = useState(initialForm);
+  console.log(data);
 
   //servira para actualizar cada que cambie el estado de dataToEdit
   useEffect(() => {
@@ -63,7 +67,7 @@ const HomeFrom = ({
 
   return (
     <div className="HomeProduct-form">
-      <h3>{dataToEdit ? 'Editar Producto' : 'Crear Producto'}</h3>
+      <h3>{dataToEdit ? `Editar ${typeForm}` : `Crear ${typeForm}`}</h3>
 
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">
@@ -88,6 +92,9 @@ const HomeFrom = ({
             maxLength="8" //limite de caracteres aceptados
           />
         </label>
+        {typeForm === 'Bodega' ? (
+          <BoxProductPlus data={data}></BoxProductPlus>
+        ) : null}
         <div className="Form-button">
           <input type="submit" value="Guardar" />
           <input type="reset" value="Borrar Todo" onClick={handleReset} />

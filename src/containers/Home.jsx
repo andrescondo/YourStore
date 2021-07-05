@@ -13,7 +13,6 @@ const Home = () => {
     let s = document.querySelector('#store');
 
     if (e.target.id === 'product') {
-      // console.log(e.target.id);
       setView(e.target.id);
       s.classList.remove('selected');
       p.classList.add('selected');

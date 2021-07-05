@@ -6,22 +6,16 @@ import '../styles/components/HomeProduct.css';
 
 import imageDefault from '../img/default.png';
 
-const BoxProductCard = ({
-  data,
-  openForm,
-  setDataToEdit,
-  deleteData,
-  product,
-}) => {
-  const [isOpenPlus, openModalPlus, closeModalPlus] = useModal(false);
+const BoxProductCard = ({ data, openForm, setDataToEdit, deleteData }) => {
+  // const [isOpenPlus, openModalPlus, closeModalPlus] = useModal(false);
   const [isOpenDel, openModalDel, closeModalDel] = useModal(false);
   const { name, code, id } = data;
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(e.name);
-    alert('Si funciona');
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log(e.name);
+  //   alert('Si funciona');
+  // };
 
   return (
     //usar este como componente hijo de boxproduct, y aqui recien hacer el map()
@@ -29,7 +23,7 @@ const BoxProductCard = ({
       <figure>
         <div className="boxProduct-icon">
           {/* =============================== */}
-          <i className="fas fa-plus" onClick={openModalPlus}></i>
+          {/* <i className="fas fa-plus" onClick={openModalPlus}></i>
           <Modals
             isOpen={isOpenPlus}
             closeModal={closeModalPlus}
@@ -43,7 +37,7 @@ const BoxProductCard = ({
                 product={product}
               />
             </div>
-          </Modals>
+          </Modals> */}
         </div>
         {/* ============================= */}
 

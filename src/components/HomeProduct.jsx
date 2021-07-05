@@ -1,6 +1,5 @@
 import React from 'react';
 import useCrudData from '../hooks/useCrudData';
-import useAddStore from '../hooks/useAddStore';
 
 import '../styles/components/HomeProduct.css';
 
@@ -12,9 +11,7 @@ import ErrorData from './ErrorData';
 const HomeProduct = () => {
   const url = 'http://localhost:3004/products';
   //asegurarse  ^^ el protocolo debe ser el correcto
-  const urlProduct = 'http://localhost:3004/store'; //addStore
   // console.log(product);
-  const { product } = useAddStore(urlProduct); //CUSTOM HOOK PARA EL ADDSTORE
   const {
     db,
     deleteData,
@@ -57,6 +54,7 @@ const HomeProduct = () => {
         <HomeFrom
           nameForm="Ingrese nombre del producto"
           codeForm="Ingrese código del producto"
+          typeForm="Producto"
           createData={createData}
           updateData={updateData}
           dataToEdit={dataToEdit}
@@ -78,7 +76,7 @@ const HomeProduct = () => {
             setDataToEdit={setDataToEdit}
             deleteData={deleteData}
             openForm={openForm}
-            product={product}
+            // product={product}
           />
         )}
       </div>
