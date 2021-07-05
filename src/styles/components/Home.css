@@ -22,10 +22,10 @@
   font-size: 18px;
   cursor:pointer;
 }
-.Home-nav li p{
+.Home-nav li{
   margin: 0;
 }
-.Home-nav li p:hover{
+.Home-nav li:hover{
   color: var(--green);
   /* padding-bottom: 8px; */
   /* border-bottom: 5px solid var(--green); */
@@ -34,7 +34,15 @@
 .Home-box{
   width: 100%;
   min-height: 300px;
-  border-top: 2px solid #fff;
+  border-top: 1px solid var(--white-rgba);
   /* border-radius: 10px; */
   padding: 15px 20px;
+}
+.Home-nav__option{
+  border-bottom: 3px solid transparent;
+  margin: 0px 0px 2px 0px;
+}
+.Home-nav__option.selected{
+  color: var(--green);
+  border-bottom:3px solid var(--green);
 }

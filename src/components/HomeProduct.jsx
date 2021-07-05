@@ -27,7 +27,7 @@ const HomeProduct = () => {
     setDataToEdit,
     error,
   } = useCrudData(url); //CUSTOM HOOK para fecth data
-  console.log(formState);
+  // console.log(formState);
 
   return (
     <div className="HomeProduct">
