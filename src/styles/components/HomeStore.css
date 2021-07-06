@@ -10,7 +10,7 @@
   width: 280px;
   padding: 18px 18px;
   background-color: var(--grey-rgba);
-  border: 3px solid var(--green);
+  border: .7px solid var(--green);
   border-radius: 10px;
   margin: 25px;
   position: relative;
@@ -33,7 +33,9 @@
   color: var(--blueBlack);
 
 }
-
+.boxStore-info{
+  border-top:2px solid var(--green);
+}
 
 .boxStore-info p {
   font-weight: 700;

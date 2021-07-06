@@ -35,7 +35,7 @@ const BoxProductCard = ({ data, openForm, setDataToEdit, deleteData }) => {
         </div>
         {/* ============================= */}
 
-        <img src={imageDefault} alt="imagen por defecto" />
+        {/* <img src={imageDefault} alt="imagen por defecto" /> */}
       </figure>
       <div className="boxProduct-info">
         <p>
