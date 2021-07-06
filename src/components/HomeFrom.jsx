@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
 import '../styles/components/HomeFrom.css';
-import BoxProductPlus from './BoxProductsPlus';
-
-// import ModalButton from './ModalButton';
 
 const initialForm = {
   name: '',
@@ -23,7 +20,7 @@ const HomeFrom = ({
   typeForm,
 }) => {
   const [form, setForm] = useState(initialForm);
-  console.log(data);
+  // console.log(data);
 
   //servira para actualizar cada que cambie el estado de dataToEdit
   useEffect(() => {
@@ -92,14 +89,26 @@ const HomeFrom = ({
             maxLength="8" //limite de caracteres aceptados
           />
         </label>
-        {typeForm === 'Bodega' ? (
-          <BoxProductPlus data={data}></BoxProductPlus>
-        ) : null}
+        {/* {typeForm === 'Bodega' ? (
+          <>
+            <h4>Agregar a Bodega</h4>
+            <div>
+              
+              <p>Lista de Productos:</p>
+              <div className="addStore">
+                {data.map((data) => (
+                  <label htmlFor={data.name} key={data.id}>
+                    <span>{data.name}</span>
+                  </label>
+                ))}
+              </div>
+
+            </div>
+          </>
+        ) : null} */}
         <div className="Form-button">
           <input type="submit" value="Guardar" />
           <input type="reset" value="Borrar Todo" onClick={handleReset} />
-
-          {/* <input type="submit" value="Cancelar" /> */}
         </div>
       </form>
     </div>

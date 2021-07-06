@@ -4,20 +4,20 @@ import Modals from './Modals';
 // import HomeFrom from './HomeFrom';
 
 const BoxStoreCard = ({ data, openForm, setDataToEdit, deleteData }) => {
-  const [isOpenEye, openModalEye, closeModalEye] = useModal(false);
+  // const [isOpenEye, openModalEye, closeModalEye] = useModal(false);
   const [isOpenDel, openModalDel, closeModalDel] = useModal(false);
   const { name, code, id } = data;
 
   return (
     <div className="boxStore">
-      <div className="boxStore-icon">
-        <i className="fas fa-eye" onClick={openModalEye}></i>
+      {/* <div className="boxStore-icon">
+       <i className="fas fa-eye" onClick={openModalEye}></i>
         <Modals isOpen={isOpenEye} closeModal={closeModalEye}>
           <div>
             <p> Mira los Productos guardados en esta Bodega: </p>
           </div>
         </Modals>
-      </div>
+  </div>*/}
       <div className="boxStore-info">
         <p>
           Nombre: <span>{name}</span>

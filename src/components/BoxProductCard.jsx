@@ -1,7 +1,7 @@
 import React from 'react';
 import { useModal } from '../hooks/useModal';
 import Modals from './Modals';
-import BoxProductPlus from './BoxProductsPlus';
+// import BoxProductPlus from './BoxProductsPlus';
 import '../styles/components/HomeProduct.css';
 
 import imageDefault from '../img/default.png';
@@ -10,12 +10,6 @@ const BoxProductCard = ({ data, openForm, setDataToEdit, deleteData }) => {
   // const [isOpenPlus, openModalPlus, closeModalPlus] = useModal(false);
   const [isOpenDel, openModalDel, closeModalDel] = useModal(false);
   const { name, code, id } = data;
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log(e.name);
-  //   alert('Si funciona');
-  // };
 
   return (
     //usar este como componente hijo de boxproduct, y aqui recien hacer el map()
